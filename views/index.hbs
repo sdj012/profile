@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<style>
+
+  #profile{
+    position: absolute;
+
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='f2f2f2' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+
+  .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='f2f2f2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+
+  .carousel-inner img{
+   margin:auto;
+   width:100%;
+   height: auto;
+  }
+
+  .carousel{
+    margin-left:15%;
+  }
+
+  .page1{
+    height:100%;
+    margin-top:12.5%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-bottom:50%;
+
+  }
+
+
+  #tabLabels{
+    margin-left:20%;
+  }
+
+  #detailsRow{
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  #links{
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  .page2{
+    padding-top:5%;
+    padding-bottom:5%;
+    height:100%;
+    background-color: lightgrey;
+  }
+
+  .imgDesc{
+    padding-top:0;
+  }
+  
+  #img{
+    width:700px;
+    height:auto;
+  }
+
+  #file1Carousel{
+   top:15%::
+  }
+
+  #gitLogo{
+    position: absolute;
+    top:45%;
+    left:0px;
+    bottom:0%;
+  }
+
+  #toolLogos{
+    margin-top:30px;
+    margin-bottom:30px;
+
+  }
+  .row{
+    margin-bottom:50px;
+  }
+
+  a{
+    color:grey;
+  }
+
+  a:hover{
+    color:black;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .description{
+  color: black;
+  {{!-- margin-top: 100px;
+  margin-left:50px;
+  margin-right:50px;
+  margin-bottom:100px; --}}
+  }
+
+  #shspaceDemo{
+    position: static;
+    margin-left:20%;
+    height:100%;
+  }
+
+  #shspaceDesc{
+    position: static;
+    top:50%;
+    left:50%;
+    bottom:25px;
+    left:50px;
+  }
+  
+  .worksLabel{
+    font-size: 50px;
+    position:absolute;
+    {{!-- bottom:0; --}}
+  }
+
+  #works{
+    font-size:25;
+    color:black;
+  }
+
+  #text{
+    color:black;
+    opacity: 0.8;
+    font-size:large;
+    font-weight: 30;
+
+  }
+
+  #appDesc{
+    color:black;
+    font-size:small;
+    font-weight:30;
+  }
+
+  html{
+    scroll-behavior: smooth;
+    overflow-x:hidden; 
+  }
+
+  title{
+    position:inherit;
+  }
+
+  body {
+    text-align: center;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color:white;
+  }
+
+  #animationTrial  {
+    {{!-- width: 100px;
+    height: 100px;
+    background: red; --}}
+    position: relative;
+    -webkit-animation-name: example;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */  
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 3s;  
+    {{!-- animation-fill-mode: forwards; --}}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    from {top: 10px;}
+    to {top: 50px}
+  }
+
+  @keyframes example {
+    from {top: 10px;}
+    to {top: 50px}
+  }
+</style>
+
+<body>
+{{!-- bootstrap icons --}}
+{{!-- <svg class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg> --}}
+<div class="page1">
+
+
+<div id="profile" class="row"> 
+
+      <div class="col-md-4">
+
+        <img src="profilePicture2.jpeg" width="45%"></img>
+
+        <div class="row">
+
+          <div id="text" class="description">
+            <div id="animationTrial">
+              Hello! I am an aspiring web developer.My goal is to contribute in building strong and reliable products.
+              <br>I work and learn best by experimenting and love to dive into challenges. Through Seneca College, I gained familiarity with object-orientated programming concepts and experienced building web applications with React,Vue,and Angular. 
+              Currently, I'm most focused on NodeJS and React.
+            </div>
+          </div>  
+        </div>
+
+      </div>
+
+    <div class="col" id="detailsRow">
+      {{!-- <img src="gear.png" width="5%">Skill Set</img> --}}
+      {{!-- <p>Skill Set<p> --}}
+      {{!-- <p class="row">
+        <a id="tabLabels"  data-toggle="collapse" data-target="#skills" aria-expanded="false" aria-controls="collapseExample">
+          Skill Set
+        </a>
+        <a id="tabLabels" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controls="collapseExample">
+          Background
+        </a>
+        <a id="tabLabels"  data-toggle="collapse" data-target="#links" aria-expanded="false" aria-controls="collapseExample">
+          Projects
+        </a>
+      </p> --}}
+
+      <div class="col-sm-8" id="skills">
+        <p id="text">Javascript/HTML/CSS</p>
+          <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+        </div>
+        <br>
+
+        <p id="text">MERN</p>
+          <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+        </div>
+        <br>
+
+         <p id="text">Git</p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+            </div>
+          <br>
+
+          <p id="text">Java</p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+            </div>
+          <br>
+
+          <p id="text">C++</p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">some knowledge</div>
+            </div>
+          <br>
+
+          <p id="text">Angular and Vue</p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">some knowledge</div>
+            </div>
+          <br>
+          
+      </div>
+
+      <div class="row" id="links">
+        <img src="book.png" width="5%"></img>
+        <a href="https://github.com/sdj012"  data-toggle="tooltip" data-placement="top" title="to github"><b id="githubLink">Academic Projects  </b></a>
+        
+        <img src="flask.png" width="5%"></img>
+        <a href="#page2"><b id="worksLabel">   Independent Projects</b></a>
+      </div>
+
+      </div>
+
+{{!-- 
+      <div class="row" id="links">
+          <img src="flask.png" width="5%"></img>
+          <a href="#page2"><b id="worksLabel">   Independent Projects</b></a>
+      </div> --}}
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="page2" id="page2">
+
+<div class="row"> 
+
+      <div class="col-6">
+      <div class="carousel" id="file1Carousel" class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" >
+            <img src="shspce1.png" class="d-block w-10" alt="..." height="206px" width="358px" >
+        </div>
+        <div class="carousel-item" >
+          <img src="shspce3.png" class="d-block w-10" alt="..." height="206px" width="358px" >
+        </div>
+        <div class="carousel-item" >
+          <img src="shspce4.png" class="d-block w-10" alt="..." height="206px" width="358px" >
+        </div>
+      </div>
+    <a class="carousel-control-prev" href="#file1Carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#file1Carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </div>
+
+        <div class="col">
+        <p id="text" class="imgDesc"><b>Simple Video Clipping Application</b><a href="https://nameless-harbor-34438.herokuapp.com"><b> demo</b></a></p>
+        <p id="appDesc">name: ssuser12 password: ssuser12</p>
+        <p id="appDesc">save and view currently active Youtube Videos</p> 
+        <div id="toolLogos">
+        <img src="nodeJSLogo.svg.png" width="10%">
+        <img src="mongodb.png" width="10%">
+        <img src="bootstrap-logo.png" width="7%">
+        <a id="gitLogo text" href="https://github.com/sdj012/shakespace"><img src="sourceCodeIcon.png" width="10%"><b id="shakespaceLink">source code</b></a>
+        </div>
+        {{!-- <a id="gitLogo" href="https://github.com/sdj012/shakespace"><img src="sourceCodeIcon.png" width="3%"><b id="shakespaceLink">files</b></a> --}}
+      </div>
+</div>
+
+<div class="row">
+
+      <div class="col-6">
+      <div id="file2Carousel" class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" >
+            <img src="travelGuide.png" class="d-block w-10" height="206px" width="358px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="travelGuide2.png" class="d-block w-10" height="206px" width="358px"  alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="travelGuide3.png" class="d-block w-10" height="206px" width="358px"  alt="...">
+        </div>
+      </div>
+        <a class="carousel-control-prev" href="#file2Carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#file2Carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col">  
+      <div class="col">
+        <p id="text" class="imgDesc"><b>US International Travel Advisory</b><a href="https://travel-advisory.herokuapp.com"><b> demo</b></a></p>      
+        <p id="appDesc">View travel advisories from U.S Government's DATA.GOV</p>
+        <p id="appDesc">View articles powered by NewsAPI</p>
+         <div id="toolLogos">
+            <img src="reactLogo.png" width="10%">
+            <img src="bootstrap-logo.png" width="7%">
+            <a id="gitLogo text" href="https://github.com/sdj012/travelAdvisory"><b id="shakespaceLink"><img src="sourceCodeIcon.png" width="10%">source code</b></a>
+            <br>
+        </div>
+        {{!-- <a id="gitLogo" href="https://github.com/sdj012/travelAdvisory"><b id="shakespaceLink"><img src="sourceCodeIcon.png" width="3%">files</b></a> --}}
+      </div>
+    </div>
+     </div>
+    <a href="#">top</a>
+</div>
+
+</body>
+<script type="javascript" src="../index.js"></script>
+<script type="javascript" src="../functions.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
