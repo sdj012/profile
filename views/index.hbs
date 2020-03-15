@@ -5,10 +5,10 @@
 
 <style>
 
-  #profile{
+  /*profile{
     position: absolute;
 
-  }
+  }*/
 
   .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='f2f2f2' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -38,6 +38,14 @@
   }
 
 
+  .page2{
+    height:100%;
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: lightgrey;
+  }
+
+
   #tabLabels{
     margin-left:20%;
   }
@@ -53,12 +61,6 @@
     margin-right:5%;
   }
 
-  .page2{
-    padding-top:5%;
-    padding-bottom:5%;
-    height:100%;
-    background-color: lightgrey;
-  }
 
   .imgDesc{
     padding-top:0;
@@ -101,10 +103,7 @@
 
   .description{
   color: black;
-  {{!-- margin-top: 100px;
-  margin-left:50px;
-  margin-right:50px;
-  margin-bottom:100px; --}}
+
   }
 
   #shspaceDemo{
@@ -120,11 +119,15 @@
     bottom:25px;
     left:50px;
   }
+
+  #githubLink{
+    margin-left:6px;
+  }
   
   .worksLabel{
     font-size: 50px;
     position:absolute;
-    {{!-- bottom:0; --}}
+    
   }
 
   #works{
@@ -167,16 +170,14 @@
   }
 
   #animationTrial  {
-    {{!-- width: 100px;
-    height: 100px;
-    background: red; --}}
+
     position: relative;
     -webkit-animation-name: example;  /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */  
     -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 3s;  
-    {{!-- animation-fill-mode: forwards; --}}
+   
   }
 
   /* Safari 4.0 - 8.0 */
@@ -197,76 +198,72 @@
 {{!-- <svg class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg> --}}
 <div class="page1">
 
+  <div id="profile" class="row"> 
 
-<div id="profile" class="row"> 
+        <div class="col-md-4">
+          <div class="row">
 
-      <div class="col-md-4">
-{{!-- 
-        <img src="profilePicture2.jpeg" width="45%"></img> --}}
+            {{!-- <div id="text" class="description">
+              <div id="animationTrial">
+                Hello! I am an aspiring web developer.My goal is to contribute in building strong and reliable products.
+                <br>I work and learn best by experimenting and love to dive into challenges. Through Seneca College, I gained familiarity with object-orientated programming concepts and experienced building web applications with React,Vue,and Angular. 
+                Currently, I'm most focused on NodeJS and React.
+              </div>
+            </div>   --}}
+          </div>
 
-        <div class="row">
-
-          <div id="text" class="description">
-            <div id="animationTrial">
-              Hello! I am an aspiring web developer.My goal is to contribute in building strong and reliable products.
-              <br>I work and learn best by experimenting and love to dive into challenges. Through Seneca College, I gained familiarity with object-orientated programming concepts and experienced building web applications with React,Vue,and Angular. 
-              Currently, I'm most focused on NodeJS and React.
-            </div>
-          </div>  
         </div>
 
-      </div>
+      <div class="col" id="detailsRow">
 
-    <div class="col" id="detailsRow">
+        <div class="col-sm-8" id="skills">
+          <p id="text">Javascript/HTML/CSS</p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+          </div>
+          <br>
 
-      <div class="col-sm-8" id="skills">
-        <p id="text">Javascript/HTML/CSS</p>
-          <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+          <p id="text">MERN</p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+          </div>
+          <br>
+
+          <p id="text">Git</p>
+              <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+              </div>
+            <br>
+
+            <p id="text">Java</p>
+              <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
+              </div>
+            <br>
+
+            <p id="text">C++</p>
+              <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">some knowledge</div>
+              </div>
+            <br>
+
+            <p id="text">Angular and Vue</p>
+              <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">some knowledge</div>
+              </div>
+            <br>
+            
         </div>
-        <br>
 
-        <p id="text">MERN</p>
-          <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
-        </div>
-        <br>
-
-         <p id="text">Git</p>
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
-            </div>
-          <br>
-
-          <p id="text">Java</p>
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">working knowledge</div>
-            </div>
-          <br>
-
-          <p id="text">C++</p>
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">some knowledge</div>
-            </div>
-          <br>
-
-          <p id="text">Angular and Vue</p>
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">some knowledge</div>
-            </div>
-          <br>
+        <div class="row" id="links">
+          <img src="book.png" width="5%"></img>
+          <a href="https://github.com/sdj012"  data-toggle="tooltip" data-placement="top" title="to github"><b id="githubLink">Academic Projects  </b></a>
           
-      </div>
+          <img src="flask.png" width="5%"></img>
+          <a href="#page2"><b id="worksLabel">   Independent Projects</b></a>
+        </div>
 
-      <div class="row" id="links">
-        <img src="book.png" width="5%"></img>
-        <a href="https://github.com/sdj012"  data-toggle="tooltip" data-placement="top" title="to github"><b id="githubLink">Academic Projects  </b></a>
-        
-        <img src="flask.png" width="5%"></img>
-        <a href="#page2"><b id="worksLabel">   Independent Projects</b></a>
-      </div>
-
-      </div>
+        </div>
 
     </div>
 
