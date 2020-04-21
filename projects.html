@@ -85,7 +85,19 @@
       right:auto;
       text-decoration:none;
       color:var(--contents);
+ 
+    }
+    
+    .place_left{
+      float:left;
+    }
+    
+    .clear{
+      clear:both;
+    }
 
+    .give_rightMargin{
+      margin-right:3%;
     }
 
   [class^="line_"]{
@@ -201,29 +213,44 @@
               <a href="#" id="links_travelAdv"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
             </p>
 
-            <p id="TravelAdvDes">
-              An index created from   
-            </p>
+            <div id="TravelAdvDes">
+              
+              <img src="travel-advisory-index.png" width="35%" class="place_left give_rightMargin">
+              <!-- <img src="travel-advisory-info-page.png" width="35%" class="place_left give_rightMargin"> -->
+
+              <p>
+                An index based on API from https://www.data.gov/
+              </p>
+
+            </div>
             
-            <p id="Embed" class="underline">Embed Code Storage and Playback (MongoDB,NodeJS)
+            <p id="Embed" class="underline clear">Embed Code Storage and Playback (MongoDB,NodeJS)
               <a href="#" id="links_embed"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a> 
             </p>
-            <p id="EmbedDes">
-              <br>
-              <br>
 
-              <img src="../NodeProject-profilePage/profiledocuments/embed-zone-demo.png">
-              ___Web application made for storing and saving source codes from streaming platforms
-              <br>
-              <br>
-              ___username:ssuser12
-              <br>
-              ___password:ssuser12
-            </p>
+            <div id="EmbedDes">
+
+              <!-- <img src="embed-zone-demo.png" width="35%"> -->
+                <img src="embed-zone-demo-2.png" width="35%" class="place_left give_rightMargin">
+                
+                <p>
+                  Web application made for storing and saving source codes from streaming platforms.
+                  <br>
+                    <p>
+                    Demo Credentials
+                    <br>
+                    <br>
+                    username: ssuser12
+                    <br>
+                    password: ssuser12
+                    </p>
+                </p>
+
+            </div>
             
-            <p id="More links_more" class="underline">more projects (Java,C++,AngularJS,VueJS)
+            <div id="More links_more" class="underline clear">more projects (Java,C++,AngularJS,VueJS)
                 <a href="#" id="links_more"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
-            </p>
+            </div>
             <!-- <p id="MoreDes">
                 These projects demonstrate foundations in Object Orientated Programming and frameworks AngularJS and VueJs
             </p> -->
@@ -271,7 +298,7 @@
       $("#links_embed").click(function(e){
         
         e.preventDefault();
-        window.open("http://www.embed.zone/login");
+        window.open("http://www.embed.zone");
         window.open("https://github.com/sdj012/shakespace/tree/master");
 
       })
