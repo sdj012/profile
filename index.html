@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+<style>
+  :root{
+    --background:white;
+    --contents:black;
+  }
+
+  html{
+    height: 100%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+
+    background-color:var(--background);
+  }
+
+  body{
+    height:100%;
+  }
+
+  .grid-container{
+
+    display: grid;
+    height:100%;
+
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 5% 95%;
+
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "profile main main";
+    
+
+    
+  }
+
+  .navbar{
+    grid-area: navbar;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:xx-large;
+    color:black;
+    
+    background-color:var(--background);
+  }
+  
+  #badge{
+    margin-top:0%;
+    margin-left:1%;
+  }
+
+  .sectionA{
+    grid-area:profile;
+
+    margin-top:15%;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:black;
+    background-color:var(--background);
+  }
+    .sectionA p {
+      margin-left:2%;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+
+  .sectionB{
+    grid-area:main;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:black;
+
+    background-color:var(--background);
+  }
+
+    .sectionB a {
+      
+      left: auto;
+      right:auto;
+      text-decoration:none;
+      color:var(--contents);
+
+
+      transition:all 0.2s ease-in-out;
+      -webkit-transition:all 0.2s ease-in;
+      -moz-transition:all 0.2s ease-in;
+    }
+
+
+
+  [class^="line_"]{
+    display: inline;
+    margin-right:2%;
+  }
+
+  .line_About{
+    color:black;
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .line_Project:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .text_About{
+    position: absolute;
+    margin-top:5%;
+    margin-right:5%;
+  }
+
+  #skillsDes{
+    display:none;
+  }
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+  <body>
+    <h1></h1>
+    <div class="grid-container">
+
+      <div class="navbar"><p id="badge">Salley Jeong</p></div>
+
+      <div class="sectionA">
+
+          <p>
+            <a class="line_About" href="https://github.com/sdj012" target="_blank" >github <img src="https://img.icons8.com/material-sharp/15/000000/external-link.png"/></a>
+          </p>
+
+          <p class="line_About">sdjeong012@gmail.com</p>
+          
+
+        </div>
+
+      <div class="sectionB">
+        
+        <div class="line_About">
+
+          <a href="#">About</a>
+
+            <div class="text_About">
+                Hello, I'm an aspiring developer based in Toronto.
+                Passionate about endless growth towards quality work, I aim to write efficient and clear code.
+                With hands-on experience designing and building pages from start to finish, I'm capable of quickly assessing challenges for fast initiation.
+
+                <br>
+                <br>
+
+                <div class="line_About" id="Skills">Skills</div>
+
+                <div id="skillsDes">
+                  
+                  <p>HTML, JS, CSS, SASS, jQuery</p>
+                  <p>ReactJS</p>
+                  <p>MongoDB, Express, Node, Mongoose</p>
+                 
+                  
+                  <!-- <div class="line_About">Working Knowledges</div> -->
+                  <!-- <p>Java</p>
+                    <p>C++</p> -->
+                  <p>Git</p>
+                  <p>Bash</p>
+                  <p>Adobe XD, Photoshop, Illustrator</p>
+                </div>
+
+
+
+              </div>
+
+        </div>
+
+        <div class="line_Project">
+          <a href="projects">Projects</a>
+        </div>
+
+    </div>
+
+    <script>
+
+      $("#Skills").click(function(){
+        $("#skillsDes").toggle("800")
+      })
+
+    </script>
+
+  </body>
+
+</html>

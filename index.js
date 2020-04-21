@@ -7,13 +7,25 @@ function onHttpStart() {
   console.log("Express http server listening on: " + HTTP_PORT);
 }
 
-app.engine('.hbs',hbstempl({extname:'.hbs'}))
-app.set('views',__dirname+'/views');
-app.set('view engine','.hbs');
+// app.engine('.hbs',hbstempl({extname:'.hbs'}))
+// app.set('views',__dirname+'/views');
+
+// app.engine('.html',{extname:'html'})
+// app.set('view engine','.html');
+
 app.use(express.static('profiledocuments')); 
 
 app.get("/",(req,res)=>{
-  res.render('index',{layout:false})
+  res.sendFile( __dirname+ '/index.html',{layout:false})
+})
+
+app.get("/index",(req,res)=>{
+  res.sendFile( __dirname+ '/index.html',{layout:false})
+})
+
+
+app.get("/projects",(req,res)=>{
+  res.sendFile( __dirname+ '/projects.html',{layout:false})
 })
 
 app.listen(HTTP_PORT, onHttpStart);

@@ -1,49 +1,9 @@
-.App {
-  text-align: center;
+@charset "UTF-8";
+
+ul{
+  list-style-type: none;
 }
 
-#profilePicture{
-  width:200px;
-  height:auto;
-  margin-top:100px;
-}
-
-.title{
-  margin-top: 100px;
-  margin-left:50px;
-  margin-right:50px;
-}
-
-
-.description{
-  color: aliceblue;
-  margin-top: 100px;
-  margin-left:50px;
-  margin-right:50px;
-}
-
-.works{
-  color:aliceblue;
-}
-
-.text{
-  align-items:left;
-  color:aliceblue;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.li{
+  display:inline;
 }

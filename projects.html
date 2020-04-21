@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+  :root{
+    --background:white;
+    --contents:black;
+  }
+
+  html{
+    height: 100%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+
+    background-color:var(--background);
+  }
+
+  body{
+    height:100%;
+  }
+
+  .grid-container{
+
+    display: grid;
+    height:100%;
+
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 5% 95%;
+
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "profile main main";
+    
+
+    
+  }
+
+  .navbar{
+    grid-area: navbar;
+    
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:xx-large;
+    color:var(--contents);
+
+    background-color:var(--background);
+  }
+
+
+  .sectionA{
+    grid-area:profile;
+
+    margin-top:15%;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:var(--contents);
+    background-color:var(--background);
+
+  }
+
+    a{
+      text-decoration: none;
+    }
+
+    .sectionA p {
+      margin-left:2%;
+    }
+
+
+  .sectionB{
+    grid-area:main;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:var(--contents);
+
+    background-color:var(--background);
+  }
+
+    .sectionB a {
+      
+      left: auto;
+      right:auto;
+      text-decoration:none;
+      color:var(--contents);
+
+    }
+
+  [class^="line_"]{
+    display: inline;
+    margin-right:2%;
+  }
+
+  .line_About:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .line_Project{
+    color:var(--contents);
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .text_Project{
+    position: absolute;
+    margin-top:5%;
+    margin-right:5%;
+  }
+
+  .underline{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+    .underline:hover{
+      color:  grey;
+      border-bottom: 1.5px solid grey;
+    }
+  
+  a{
+    text-decoration: none;
+  }
+
+  #AngularVueDes{
+    display: none;
+  }
+
+  #JavaDes{
+    display: none;
+  }
+
+  #PerTestDes{
+    display: none;
+  }
+
+  #TravelAdvDes{
+    display: none;
+  }
+
+  #EmbedDes{
+    display: none;
+  }
+
+  #badge{
+    margin-top:0%;
+    margin-left:1%;
+  }
+
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+  <body>
+    <h1></h1>
+    <div class="grid-container">
+        
+      <div class="navbar"><p id="badge">Salley Jeong</p></div>
+
+        <div class="sectionA">
+            
+            <p>
+              <a class="line_Project" href="https://github.com/sdj012" target="_blank" >github <img src="https://img.icons8.com/material-sharp/15/000000/external-link.png"/></a>
+            </p>
+  
+            <p class="line_Project">sdjeong012@gmail.com</p>
+            
+  
+          </div>  
+   
+
+      <div class="sectionB">
+        
+        <div class="line_About">
+          <a href="index">About</a>
+        </div>
+
+        <div class="line_Project">
+          <a href="#">Projects</a>
+
+          <div class="text_Project">
+
+            <!-- <p id="AngularVue" class="underline">Angular, Vue </p>
+            <p id="AngularVueDes">see some tasks accomplished accomplished using AngularJS and VueJS</p>
+            
+            <p id="Java" class="underline">Java</p>
+            <p id="JavaDes">see a series of short programs written in Java</p> -->
+
+            <p id="PerTest" class="underline">Test Aid (ReactJS)
+              <a href="#" id="links_perTest"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
+            </p>
+
+            <p id="PerTestDes">
+
+              A test aid for book "Leise gewinnt: So verschaffen sich Introvertierte Gehör" by Doris Märtin
+            </p>
+
+            <p id="TravelAdv" class="underline">Travel Advisory Index (ReactJS)
+              <a href="#" id="links_travelAdv"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
+            </p>
+
+            <p id="TravelAdvDes">
+              An index created from   
+            </p>
+            
+            <p id="Embed" class="underline">Embed Code Storage and Playback (MongoDB,NodeJS)
+              <a href="#" id="links_embed"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a> 
+            </p>
+            <p id="EmbedDes">
+              <br>
+              <br>
+
+              <img src="../NodeProject-profilePage/profiledocuments/embed-zone-demo.png">
+              ___Web application made for storing and saving source codes from streaming platforms
+              <br>
+              <br>
+              ___username:ssuser12
+              <br>
+              ___password:ssuser12
+            </p>
+            
+            <p id="More links_more" class="underline">more projects (Java,C++,AngularJS,VueJS)
+                <a href="#" id="links_more"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
+            </p>
+            <!-- <p id="MoreDes">
+                These projects demonstrate foundations in Object Orientated Programming and frameworks AngularJS and VueJs
+            </p> -->
+          
+          </div>
+
+        </div>
+
+       
+
+    </div>
+    
+
+    <script>
+
+      $("#AngularVue").click(function(){
+        $("#AngularVueDes").toggle("slow")
+      })
+
+      $("#More").click(function(){
+        $("#MoreDes").toggle("slow")
+      })
+
+      $("#PerTest").click(function(){
+        $("#PerTestDes").toggle("slow")
+      })
+
+      $("#TravelAdv").click(function(){
+        $("#TravelAdvDes").toggle("slow")
+      })
+      
+      $("#Embed").click(function(){
+        $("#EmbedDes").toggle("slow")
+      })
+
+      $("#links_travelAdv").click(function(e){
+        
+        e.preventDefault();
+        window.open("https://travel-advisory.herokuapp.com");
+        window.open("https://github.com/sdj012/travelAdvisory");
+
+      })
+
+
+      $("#links_embed").click(function(e){
+        
+        e.preventDefault();
+        window.open("http://www.embed.zone/login");
+        window.open("https://github.com/sdj012/shakespace/tree/master");
+
+      })
+
+
+    </script>
+
+  </body>
+
+</html>
