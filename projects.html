@@ -11,7 +11,6 @@
 
   html{
     height: 100%;
-    overflow-y:hidden;
     overflow-x:hidden;
 
     background-color:var(--background);
@@ -32,9 +31,6 @@
     grid-template-areas: 
       "navbar navbar navbar"
       "profile main main";
-    
-
-    
   }
 
   .navbar{
@@ -153,6 +149,15 @@
     display: none;
   }
 
+  #credentials{
+    color:grey;
+  }
+
+  #credentials_content{
+    display: none;
+    color:grey;
+  }
+
   #badge{
     margin-top:0%;
     margin-left:1%;
@@ -194,35 +199,31 @@
 
           <div class="text_Project">
 
-            <!-- <p id="AngularVue" class="underline">Angular, Vue </p>
-            <p id="AngularVueDes">see some tasks accomplished accomplished using AngularJS and VueJS</p>
-            
-            <p id="Java" class="underline">Java</p>
-            <p id="JavaDes">see a series of short programs written in Java</p> -->
 
-            <p id="PerTest" class="underline">Test Aid (ReactJS)
-              <a href="#" id="links_perTest"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
-            </p>
-
-            <p id="PerTestDes">
-
-              A test aid for book "Leise gewinnt: So verschaffen sich Introvertierte Gehör" by Doris Märtin
-            </p>
-
-            <p id="TravelAdv" class="underline">Travel Advisory Index (ReactJS)
+            <p id="TravelAdv" class="underline clear">Travel Advisory Index (ReactJS)
               <a href="#" id="links_travelAdv"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
             </p>
 
             <div id="TravelAdvDes">
               
               <img src="travel-advisory-index.png" width="35%" class="place_left give_rightMargin">
-              <!-- <img src="travel-advisory-info-page.png" width="35%" class="place_left give_rightMargin"> -->
 
               <p>
-                An index based on API from https://www.data.gov/
+                Index based on dataset:
+                <br>
+                <a href="https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json" target="_blank" style="text-decoration: underline">https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json</a>
               </p>
 
             </div>
+
+            <div id="PerTest" class="underline clear">Test Aid (ReactJS)
+                <a href="#" id="links_perTest"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
+              </div>
+  
+              <p id="PerTestDes">
+                <img src="testAid.png" width="35%" class="place_left give_rightMargin">
+                An aid for a test featured in book "Leise gewinnt: So verschaffen sich Introvertierte Gehör" by Doris Märtin.
+              </p>  
             
             <p id="Embed" class="underline clear">Embed Code Storage and Playback (MongoDB,NodeJS)
               <a href="#" id="links_embed"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a> 
@@ -230,30 +231,20 @@
 
             <div id="EmbedDes">
 
-              <!-- <img src="embed-zone-demo.png" width="35%"> -->
                 <img src="embed-zone-demo-2.png" width="35%" class="place_left give_rightMargin">
                 
                 <p>
-                  Web application made for storing and saving source codes from streaming platforms.
+                  Web application made for storing and replaying from video source codes from streaming platforms.
                   <br>
-                    <p>
-                    Demo Credentials
-                    <br>
-                    <br>
-                    username: ssuser12
-                    <br>
-                    password: ssuser12
-                    </p>
+                    <p id="credentials">credentials for demo</p>
+                    <p id="credentials_content">username: ssuser12 <br> password: ssuser12</p>
+                  
                 </p>
 
             </div>
             
-            <div id="More links_more" class="underline clear">more projects (Java,C++,AngularJS,VueJS)
-                <a href="#" id="links_more"><img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
+            <div class="underline clear"><a href="#" class="underline" id="More links_more">more projects (Java,C++,AngularJS,VueJS)<img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a>
             </div>
-            <!-- <p id="MoreDes">
-                These projects demonstrate foundations in Object Orientated Programming and frameworks AngularJS and VueJs
-            </p> -->
           
           </div>
 
@@ -286,6 +277,10 @@
         $("#EmbedDes").toggle("slow")
       })
 
+      $("#credentials").click(function(){
+        $("#credentials_content").toggle("slow")
+      })
+
       $("#links_travelAdv").click(function(e){
         
         e.preventDefault();
@@ -302,6 +297,8 @@
         window.open("https://github.com/sdj012/shakespace/tree/master");
 
       })
+
+
 
 
     </script>

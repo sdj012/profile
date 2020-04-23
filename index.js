@@ -7,11 +7,6 @@ function onHttpStart() {
   console.log("Express http server listening on: " + HTTP_PORT);
 }
 
-// app.engine('.hbs',hbstempl({extname:'.hbs'}))
-// app.set('views',__dirname+'/views');
-
-// app.engine('.html',{extname:'html'})
-// app.set('view engine','.html');
 
 app.use(express.static('profiledocuments')); 
 
