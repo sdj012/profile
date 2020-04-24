@@ -23,4 +23,8 @@ app.get("/projects",(req,res)=>{
   res.sendFile( __dirname+ '/projects.html',{layout:false})
 })
 
+app.get("/test",(req,res)=>{
+  res.sendFile( __dirname+ '/test.html',{layout:false})
+})
+
 app.listen(HTTP_PORT, onHttpStart);

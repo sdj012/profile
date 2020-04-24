@@ -1,3 +1,4 @@
 node_modules
 ./index_B.css
 ./views/index.hbs
+../test.html
