@@ -93,7 +93,7 @@
     }
 
     .give_rightMargin{
-      margin-right:3%;
+      /* margin-right:3%; */
     }
 
   [class^="line_"]{
@@ -183,8 +183,12 @@
     text-anchor: end;
   }
 
+  /*descriptions*/
   .des_text{
-    width:35%;
+    position: relative;
+    width:25%;
+    margin-left:1%;
+    margin-right:3%;
     float:right;
   }
 
@@ -254,10 +258,10 @@
               </p>
   
               <div id="android-1-Des">
+                  
                   <p id="date">2020</p>
 
                   <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/hpGE_m2fqbg?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
                   <p class="des_text">
                     Android application that generates optimal purchasing options for users of app V LIVE.
@@ -272,21 +276,22 @@
               </p>
   
               <div id="EmbedDes">
-                  <p id="date">2020</p>
+                  
+                    <p id="date">2020</p>
                     <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/Mgkkw2D4nRI?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <p class="des_text">
+                  
+                    <div class="des_text">
                     Web application made for storing and replaying from video source codes from streaming platforms.
                     <br>
                       <p id="credentials">credentials for demo</p>
                       <p id="credentials_content">username: ssuser12 <br> password: ssuser12</p>
                     
-                  </p>
+                    </div>
   
               </div>
           
               <p id="TravelAdv" class="underline clear"> <img  id="ext_link" src="desktop_icon.png" width="25"></img>Travel Advisory Index (ReactJS)               
                 <a href="#" id="links_travelAdv">site + source</a>
-
               </p>
 
             <div id="TravelAdvDes">
@@ -294,11 +299,9 @@
               
                 <iframe class="place_left give_rightMargin" width="600px" height="300px" src="https://www.youtube.com/embed/S1_anb03zmU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-              <p class="des_text">
-                Index based on dataset:
-                <br>
-                <a href="https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json" target="_blank" style="text-decoration: underline">https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json</a>
-              </p>
+                <div class="des_text">An index based on a JSON dataset. </div>
+                  <!-- <a style="display:inline-block;padding-right:50%;" href="https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json" target="_blank" style="text-decoration: underline">https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json</a></p> -->
+    
 
             </div>
 
