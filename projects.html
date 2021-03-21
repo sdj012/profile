@@ -10,9 +10,10 @@
   }
 
   html{
-    height: 100%;
+    height: 100vh;
     overflow-x:hidden;
-
+    overflow-y:scroll;
+    padding-bottom: 10%;
     background-color:var(--background);
   }
 
@@ -101,6 +102,11 @@
     margin-right:2%;
   }
 
+  [class^="line_"]:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+
   .line_About:hover{
     border-bottom: 1.5px solid var(--contents);
   }
@@ -129,6 +135,10 @@
     text-decoration: none;
   }
 
+  [id$="Des"]{
+    display:none;
+  }
+
   #AngularVueDes{
     display: none;
   }
@@ -137,7 +147,7 @@
     display: none;
   }
 
-  #DirectoryAssgnDes{
+  #DirectoryAssignDes{
     display: none;
   }
 
@@ -185,7 +195,7 @@
 
   /*descriptions*/
   .des_text{
-    position: relative;
+    position:static;
     width:25%;
     margin-left:1%;
     margin-right:3%;
@@ -226,33 +236,35 @@
     <h1></h1>
     <div class="grid-container">
         
-      <div class="navbar"><p id="badge">Salley Jeong</p></div>
+      <!-- <div class="navbar"><p id="badge">Salley Jeong</p></div>-->
 
         <div class="sectionA">
             
-            <p>
-              <a class="line_Project" href="https://github.com/sdj012" target="_blank" >github <img src="https://img.icons8.com/material-sharp/15/000000/external-link.png"/></a><a href="#" class="clear" >
+            <!-- <p>
+            <a class="line_Project" href="https://github.com/sdj012" target="_blank" >github <img src="https://img.icons8.com/material-sharp/15/000000/external-link.png"/></a><a href="#" class="clear" > -->
               <!-- <img src="inst_icon.png" width="25"></img></a> -->
-            </p>
+            <!-- </p>
   
             <p class="line_Project">sdjeong012@gmail.com</p>
-            
+             -->
   
           </div>  
    
 
       <div class="sectionB">
         
-        <div class="line_About">
-          <a href="index">About</a>
+        <div class="line_Arrow">
+          <a href="index"><img src="backarrowgif.gif" width="20px" height="auto"></img></a>
         </div>
 
         <div class="line_Project">
-          <a href="#">Projects</a>
+          <a href="#">Home</a>
 
           <div class="text_Project">
 
-              <p id="android-1" class="underline clear"><img  id="ext_link" src="android_icon.png" width="25"></img>Optimizer for V LIVE Coins(Java)
+            <p class="underline clear"><br>Projects <br></p>
+
+              <p id="android-1" class="underline clear"><img  id="ext_link" src="android_icon.png" width="25"></img>Optimizer for V LIVE Coins (Java)
                 <a href="#" id="links_android-1">site + source</a> 
 
               </p>
@@ -289,6 +301,13 @@
                     </div>
   
               </div>
+
+            
+              <p id="Embed" class="underline clear"><img id="ext_link" src="desktop_icon.png" width="25"></img> Synchronous Barcode Generator (ReactJS)
+                <a href="#" id="links_embed">site + source</a> 
+
+              </p>
+
           
               <p id="TravelAdv" class="underline clear"> <img  id="ext_link" src="desktop_icon.png" width="25"></img>Travel Advisory Index (ReactJS)               
                 <a href="#" id="links_travelAdv">site + source</a>
@@ -305,18 +324,123 @@
 
             </div>
 
-            <p id="DirectoryAssgn" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25"></img>The Student Directory (ReactJS)
-                <a href="#" id="links_DirectoryAssgn">site + source</a>
-
-              </p>
+            <p id="DirectoryAssign" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25"></img>The Student Directory (ReactJS)
+                <a href="#" id="links_DirectoryAssign">site + source</a>
+            </p>
   
-              <div id="DirectoryAssgnDes">
-                <p id="date">2020</p>
+            <div id="DirectoryAssignDes">
+              <p id="date">2020</p>
 
-                <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
-              </div>  
+              <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+             </div>  
+
+             <br>
+            <!-- <p id="DirectoryAssign" class="underline clear"><br>Other: <br></p> -->
+
+        
+
+          <p id="PythonAssign" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25">Price Scraping Script (python)</img> 
+            <a href="#" id="links_PythonAssign">site + source</a>
+
+          </p>
+
+          <div id="PythonAssignDes">
+            <p id="date">2020</p>
+
+            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+          </div>  
+
+
+          <p id="OneLineAssign" class="underline clear"><img id="ext_link" src="desktop_icon.png" width="25">One Line Project Starter (bash) </img> 
+            <a href="#" id="links_OneLineAssign">site + source</a>
+          </p>
+
+          <div id="OneLineAssignDes">
+            <p id="date">2020</p>
+            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+          </div>  
+
+
+          <p id="ShopifyAssign" class="underline clear"><img  id="ext_link" src="cart_icon.png" width="25">BTS Lemona (Shopify)</img> 
+            <a href="#" id="links_ShopifyAssign">site + source</a>
+          </p>
+
+          <div id="ShopifyAssignDes">
+            <p id="date">2020</p>
+            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+          </div> 
+          
+
+          <p id="AGridAssign" class="underline clear"><img  id="ext_link" src="cart_icon.png" width="25">A-Grid - Dropshipping Store (Wordpress)</img> 
+            <a href="#" id="links_AGridAssign">site + source</a>
+          </p>
+
+          <div id="AGridAssignDes">
+            <p id="date">2020</p>
+
+            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+          </div>  
+
+
+          <div class="progress" style="opacity: 0.5;">
+            <p class="underline clear"><br>In Progress <br></p>
+
+            <p id="KotlinAssign" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25"></img> Days Since Birth Log (Kotlin,Android)
+              <a href="#" id="links_KotlinAssign">site + source</a>
+
+            </p>
+
+            <div id="KotlinAssignDes">
+              <p id="date">2020</p>
+
+              <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            </div>  
+
+
+            <p id="BarcodeLogAssign" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25"></img> Barcode Log (MongoDB,NodeJS)
+              <a href="#" id="links_DirectoryAssign">site + source</a>
+
+            </p>
+
+            <div id="BarcodeLogAssignDes">
+              <p id="date">2020</p>
+
+              <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            </div>  
+          
+            <p id="SpotifyAssign" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25"></img> Artist Discography - Spotify API (ReactJS)
+              <a href="#" id="links_DirectoryAssign">site + source</a>
+
+            </p>
+
+            <div id="SpotifyAssignDes">
+              <p id="date">2020</p>
+
+              <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            </div>  
+
+
+
+          </div>
+
+          
+
+          
+
 
             
             <!-- <div class="underline clear"><a href="#" class="underline" id="More links_more">more projects (Java,C++,AngularJS,VueJS)<img src="https://img.icons8.com/material-sharp/23/000000/external-link.png"/></a> -->
@@ -324,9 +448,10 @@
           
           </div>
 
-        </div>
+          <!-- <div class="line_Skills" id="Skills">Skills</div>
+          <div class="line_Log"> Log</div>    -->
 
-       
+        </div>
 
     </div>
     
@@ -341,10 +466,10 @@
         $("#MoreDes").toggle("slow")
       })
 
-      $("#DirectoryAssgn").click(function(){
-        $("#DirectoryAssgnDes").toggle("slow")
+      $("#DirectoryAssign").click(function(){
+        $("#DirectoryAssignDes").toggle("slow")
       })
-
+      
       $("#TravelAdv").click(function(){
         $("#TravelAdvDes").toggle("slow")
       })
@@ -352,15 +477,35 @@
       $("#Embed").click(function(){
         $("#EmbedDes").toggle("slow")
       })
-
+      
       $("#credentials").click(function(){
         $("#credentials_content").toggle("slow")
       })
-
+      
       $("#android-1").click(function(){
         $("#android-1-Des").toggle("slow")
       })
 
+      $("#PythonAssign").click(function(){
+        $("#PythonAssignDes").toggle("slow")
+      })
+
+      $("#OneLineAssign").click(function(){
+        $("#OneLineAssignDes").toggle("slow")
+      })
+
+      $("ShopifyAssign").click(function(){
+        $("#ShopifyAssignDes").toggle("slow")
+      })
+      
+      $("KotlinAssign").click(function(){
+        $("#KotlinAssignDes").toggle("slow")
+      })
+      
+      $("BarcodeLogAssign").click(function(){
+        $("#BarcodeLogAssignDes").toggle("slow")
+      })
+      
 
       /*external links*/
 
@@ -389,7 +534,7 @@
 
       })
 
-      $("#links_DirectoryAssgn").click(function(e){
+      $("#links_DirectoryAssign").click(function(e){
         
         e.preventDefault();
         window.open("https://front-end-assessment-profiles.herokuapp.com/");

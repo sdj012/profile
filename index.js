@@ -7,7 +7,6 @@ function onHttpStart() {
   console.log("Express http server listening on: " + HTTP_PORT);
 }
 
-
 app.use(express.static('profiledocuments')); 
 
 app.get("/",(req,res)=>{
@@ -27,4 +26,9 @@ app.get("/test",(req,res)=>{
   res.sendFile( __dirname+ '/test.html',{layout:false})
 })
 
+app.get("/index_updated",(req,res)=>{
+  res.sendFile( __dirname+ '/index_updated.html',{layout:false})
+})
+
 app.listen(HTTP_PORT, onHttpStart);
+
