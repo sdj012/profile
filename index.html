@@ -393,6 +393,17 @@
                 <!-- Flickity HTML init -->
 
                 <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
+                  <div class="carousel-cell"><img id="myImg06" src="barcodeGen_1.gif" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg07" src="barcodeGen_2.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg08" src="barcodeGen_3.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg09" src="barcodeGen_4.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg10" src="barcodeGen_5.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg11" src="barcodeGen_6.png" height="100px"></div>
+                  </div>
+                  
+                <br>
+
+                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
                   <div class="carousel-cell"><img src="3.png" height="100px"></div>
                   <div class="carousel-cell"><img src="7.png" height="100px"></div>
                   <div class="carousel-cell"><img src="41.png" height="100px"></div>
@@ -409,6 +420,7 @@
                   <div class="carousel-cell">carousel-3</div>
                   <div class="carousel-cell">carousel-4</div>
                   </div>
+
   
                 
 
@@ -482,6 +494,70 @@
       img.onclick = function(){
         modal.style.display = "block";
         modalImg.src = "custom_ecommerce.gif" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+
+
+
+      var img = document.getElementById("myImg06");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_1.gif" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg07");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_2.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg08");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_3.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg09");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_4.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg10");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_5.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+
+      var img = document.getElementById("myImg11");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_6.png" //
         modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
         captionText.innerHTML = this.alt;
       }
