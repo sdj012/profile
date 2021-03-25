@@ -10,11 +10,11 @@ function onHttpStart() {
 app.use(express.static('profiledocuments')); 
 
 app.get("/",(req,res)=>{
-  res.sendFile( __dirname+ '/index.html',{layout:false})
+  res.sendFile( __dirname+ '/index_2.html',{layout:false})
 })
 
 app.get("/index",(req,res)=>{
-  res.sendFile( __dirname+ '/index.html',{layout:false})
+  res.sendFile( __dirname+ '/index_2.html',{layout:false})
 })
 
 
