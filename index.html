@@ -8,6 +8,8 @@
     --contents:black;
   }
 
+  
+
   html{
     height: 100vh;
     overflow-y:scroll;
@@ -86,7 +88,7 @@
     .sectionB a {
       
       left: auto;
-      right:auto;
+      /* right:auto; */
       text-decoration:none;
       color:var(--contents);
 
@@ -151,30 +153,50 @@
   .pic img{
     /* display: inline; */
     border-radius: 50%;
+  }
 
+  .hashtags a{
+    color:lightgray;
+  }
+
+  .hashtags a:hover{
+    color:gray;
+  }
+
+  .hashtags > div{ 
+    display: inline;
+    color:lightgray;
+  }
+
+  .hashtags div:hover{
+    display: inline;
+    color:gray;
+    text-decoration: underline;
   }
 
   .pin{
     display: inline;
     border-width: 20%;
-    border-color: #bbb;
+    border-color: lightblue;
   }
 
   .pin img{
-    background-color: black;
+    /* background-color: black; */
     margin-left:2%;
     margin-right:2%;
     border-radius: 50%;
 
-    border:2px solid lightgray;
+    /* border:3px solid #EDECEC; */
+    border:3px solid #39B7CD;
     margin-bottom: 5%;
     height: 70px;
     width: 70px;
   }
 
-  #myModal img{
+
+  /* #myModal img{
     width:35%;
-  }
+  } */
 
   .p1{
     height: 100%;
@@ -223,42 +245,6 @@
   transition: 0.3s;
 }
 
-[id^=myImg]:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
 
 /* Add Animation */
 .modal-content, #caption {  
@@ -278,29 +264,175 @@
   to {transform:scale(1)}
 }
 
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
   }
+}
+
+.row{
+  display:block;
+  margin-left:10%;
+  margin-right:0%;
+}
+
+.row > .column {
+  padding: 0 8px;
+  margin-top: 2%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+/* Modal Stories Content (image) */
+#modalStories img{
+  margin-left:33%;
+  margin-right:33%;
+}
+
+.modal-content {
+  margin: auto;
+  /* display: block; */
+  /* width: 100%; */
+  /* max-width: 700px; */
+  height:120%;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  /* width: 90%; */
+  /* max-width: 1200px; */
+}
+
+#myModal {
+  width:100%;
+  height:auto;
+  /* margin-right:auto;
+  margin-left:auto; */
+} 
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer !important;
+  position: absolute !important;
+  top: 50% !important;
+  width: auto !important;
+  padding: 16px !important;
+  margin-top: -50px!important;
+  color: black !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  transition: 0.6s ease !important;
+  border-radius: 0 3px 3px 0 !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 26% !important;
+  border-radius: 3px 0 0 3px !important;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo{
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow :hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -342,15 +474,37 @@
         <div class="menu">
 
         <div class="line_About">
+
           
           
           <a href="#">About</a>
           
 
             <div class="text_About">
-                Hello, my name is Salley Jeong, an aspiring developer based in Toronto.With hands-on experience designing and building pages from start to finish, I'm capable of quickly assessing and diving into challenges.
-                Prioritizing effectivity and reliability at all times, I aim to write with conciseness and consistency.
+                <!-- <br> Goal: To simplify every problem and create simpler solutions -->
+                <!-- <br> “Make it work, make it right, make it fast.” – Kent Beck <br>
+                <br> “ Code is like humor. When you have to explain it, it’s bad.” – Cory House <br> -->
+                <!-- “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler<br> -->
+                <div class="hashtags">
+                  <div><a href="#node">Node.js</a></div>
+                  <div><a href="#mongo">MongoDB</a></div>
+                  <div><a href="#android">Android</a></div>
+                  <div><a href="#java">Java</a></div>
+                  <div><a href="#kotlin">Kotlin</a></div>
+                  <div><a href="#bash">Bash</a></div>
+                  <div><a href="#python">Python</a></div>
+                  <div><a href="#react">ReactJS</a></div>   
+                  <br>
+                  <div><a href="#shopify">Shopify</a></div>
+                  <div><a>Wordpress</a></div>
+                  <div><a>Woocommerce</a></div>
+                  <div><a>Divi Elementor Themify</a></div>   
+                  <div>GoDaddy</div>
+                  <div>Bluehost</div>
+                </div>
                 
+                <br>
+                “Make it work, make it right, make it fast.” – Kent Beck 
                 <br>
                 <br>
 
@@ -364,81 +518,417 @@
                   <p>Bash</p>
                   <p>Adobe XD, Photoshop, Illustrator</p>
                 </div>
-
-                <!-- The Modal -->
-                
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  <a id="modalImgLinksTo"><img class="modal-content" id="img"></a>
-                  <div id="caption"></div>
-                </div>
-             
-                
+              
+           
+                                
+                <!-- "Stories" -->
+      
                 <div class="pin"><img id="myImg" src="home.gif" height="70px"></img></div>
+
+                <div class="pin"><img id="myImg04" src="custom_ecommerce.gif" height="70px"></img></div>
 
                 <div class="pin"><img id="myImg02" src="embed_StoryView.gif" height="70px"></img></div>
 
                 <div class="pin"><img id="myImg03" src="barcode_react.gif" height="70px"></img></div>
 
-                <div class="pin"><img id="myImg04" src="custom_ecommerce.gif" height="70px"></img></div>
+                <div class="pin"><img id="myImg05" src="data_scrape_story.gif" height="70px"></img></div>
 
-                <div class="pin"><img id="myImg05" src="scripts.png" height="70px"></img></div>
+                <!-- "Stories" Modal style="padding-right:25%;padding-left:25%;width:40%;" -->
                 
+                 <div id="modalStories" class="modal" >
+                  <span class="close cursor" onclick=closeModal()>&times;</span>
+                  <a id="modalStoriesImgLinksTo"><img class="modal-content" id="imgStories"></a>
+                  <div id="caption"></div>
+                </div>
 
 
 
-                <hr></hr>
 
-                <br>
-                <!-- Flickity HTML init -->
 
-                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
-                  <div class="carousel-cell"><img id="myImg06" src="barcodeGen_1.gif" height="100px"></div>
-                  <div class="carousel-cell"><img id="myImg07" src="barcodeGen_2.png" height="100px"></div>
-                  <div class="carousel-cell"><img id="myImg08" src="barcodeGen_3.png" height="100px"></div>
-                  <div class="carousel-cell"><img id="myImg09" src="barcodeGen_4.png" height="100px"></div>
-                  <div class="carousel-cell"><img id="myImg10" src="barcodeGen_5.png" height="100px"></div>
-                  <div class="carousel-cell"><img id="myImg11" src="barcodeGen_6.png" height="100px"></div>
+
+               
+
+                <div class="row">
+
+                  <!--Shopify: Video Background -->
+
+                  <div id="shopify" class="column">
+                    <img class="demo cursor" src="ecommerce/11.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
-                  
-                <br>
 
-                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
-                  <div class="carousel-cell"><img src="3.png" height="100px"></div>
-                  <div class="carousel-cell"><img src="7.png" height="100px"></div>
-                  <div class="carousel-cell"><img src="41.png" height="100px"></div>
-                  <div class="carousel-cell">carousel-3</div>
-                  <div class="carousel-cell">carousel-4</div>
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/12.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/13.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/14.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/15.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/17.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
                 
-                <br>
+                  <!--Shopify: Embedding Twitter -->
 
-                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
-                  <div class="carousel-cell"><img src="3.png" height="100px"></div>
-                  <div class="carousel-cell"><img src="7.png" height="100px"></div>
-                  <div class="carousel-cell"><img src="41.png" height="100px"></div>
-                  <div class="carousel-cell">carousel-3</div>
-                  <div class="carousel-cell">carousel-4</div>
+                  <div id="shopify" class="column">
+                    <img class="demo cursor" src="ecommerce/18.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/19.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/20.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/21.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/22.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/22.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <!--Shopify: Increasing No. of Slides -->
+
+
+                  <div id="shopify" class="column">
+                    <img class="demo cursor" src="ecommerce/60.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/63.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/62.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/62.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/62.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/62.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <!--[Community] Shopify-->
+
+                  <!-- <div class="column">
+                    <img class="demo cursor" src="ecommerce/cover.png" style="width:100%" onclick="currentSlide(4)">
+                  </div> -->
+
+
+                  <div id="shopify" class="column">
+                    <img class="demo cursor" src="shopifyCommunity_Log.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopifyCommunity_2.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopifyCommunity_3.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopifyCommunity_4.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopifyCommunity_5.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopifyCommunity_5.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+       
+
+
+                  <!--Barcode-->
+
+                  <div id="react" class="column">
+                    <img class="demo cursor" src="title_BarcodeGenerator.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img src="barcodeGen_1.gif" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="barcodeGen_2.png"  style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="barcodeGen_4.png"  style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/28.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="ecommerce/29.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+
 
   
+                </div>
                 
 
-              
+
+
+                <!-- <hr></hr> -->
+
+                <br>
                 
+
+                <div class="row">
+
+                  <!--Project-->
+
+
+                  <div id="android" class="column">
+                    <img class="demo cursor" src="title_optimizer.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+  
+                  <div id="java" class="column">
+                    <img class="demo cursor" src="1_Log_1.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+                
+                  <div class="column">
+                    <img class="demo cursor" src="1_Log_1.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="1_Embed_progress.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img src="1_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                  </div>
+
+
+                  <div class="column">
+                    <img src="1_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="1_Log_6.gif"  style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+                  </div>
+
+                </div>
+
+
+
+                
+                <div class="row">
+
+                  <!--Row-->
+
+
+
+                  <div id="node" class="column">
+                    <img class="demo cursor" src="title_embed.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+                  
+                  <div id="mongo" class="column">
+                    <img src="Embed_Log_2.gif"  style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_1.png"  style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="scripts_cover.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div id="python" class="column">
+                    <img class="demo cursor" src="/ecommerce/data_scrape_python.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+  
+
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="title_SpotifyDiscography.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="title_LinearClock.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="title_SpotifyButton.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="reactjs_cover.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="restAPI_cover.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="woocommerce_cover.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                </div>
+
+
+                 <!-- Post Details -->
+
+                 <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  
+                  <!--Barcode Generator-->
+                  
+                  <div class="modal-content">
+
+                    <div class="mySlides">
+                      <div class="numbertext">1 </div>
+                      <img src="barcodeGen_1.gif" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">2 </div>
+                      <img src="barcodeGen_2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">3 </div>
+                      <img src="barcodeGen_3.png" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides">
+                      <div class="numbertext">4 </div>
+                      <img src="barcodeGen_4.png" style="width:100%">
+                    </div>
+
+                    <!--V Live-->
+
+                    <div class="mySlides">
+                      <div class="numbertext">5 </div>
+                      <img src="1_Log_1.gif" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">6 </div>
+                      <img src="1_Log_1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">7 </div>
+                      <img src="1_Log_1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">8 </div>
+                      <img src="1_Log_3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">9</div>
+                      <img src="1_Log_3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">10 </div>
+                      <img src="1_Log_5.png" style="width:100%">
+                    </div>
+
+
+                    <div class="mySlides">
+                      <div class="numbertext">11 </div>
+                      <img src="1_Log_6.gif" style="width:100%">
+                    </div>
+
+                    <!-- Embed -->
+
+                    <div class="mySlides">
+                      <div class="numbertext">12 </div>
+                      <img src="Embed_Log_2.gif" style="width:100%">
+                    </div>
+
+
+                    <div class="mySlides">
+                      <div class="numbertext">13 </div>
+                      <img src="Embed_Log_1.png" style="width:100%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">14 </div>
+                    <img src="Embed_Log_3.png" style="width:100%">
+                  </div>
+
+                </div>
+
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+                  
+              </div>
+
+
+                <div class="line_Skills" id="Skills">Skills</div>
+                <div class="line_Project"><a href="projects">Projects</a></div>
+                <div class="line_Log"><a href="#p2">Log</a></div>
+                <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
+
+
+
+
+
+
               </div>
               
-        
         </div>
                       
-        <div class="line_Skills" id="Skills">Skills</div>
-        <div class="line_Project"><a href="projects">Projects</a></div>
-        <div class="line_Log"><a href="#p2">Log</a></div>
-        <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
+   
       </div>
-
-      </div>
-
 
       </div>
 
@@ -452,133 +942,112 @@
 
     <script>
 
+      // Stories + Modal
+
       // Get the modal
-      var modal = document.getElementById("myModal");
-      var modalImgLink = document.getElementById("modalImgLinksTo");
+      var modalStories = document.getElementById("modalStories");
+      var modalStoriesImgLink = document.getElementById("modalStoriesImgLinksTo");
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg");
-      var modalImg = document.getElementById("img");
+      var imgStories = document.getElementById("myImg");
+      var modalImgStories = document.getElementById("imgStories");
       var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "home.gif" //
-        modalImg.href="https://front-end-assessment-profiles.herokuapp.com"
+      imgStories.onclick = function(){
+        modalStories.style.display = "block";
+        modalImgStories.src = "home.gif" //
+        modalImgStories.href="https://front-end-assessment-profiles.herokuapp.com"
         captionText.innerHTML = this.alt;
       }
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg02");
-      var modalImg = document.getElementById("img");
+      var imgStories  = document.getElementById("myImg02");
+      var modalImgStories  = document.getElementById("imgStories");
       var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "embed_StoryView.gif" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+      imgStories.onclick = function(){
+        modalStories.style.display = "block";
+        modalImgStories.src = "embed_StoryView.gif" //
+        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
         captionText.innerHTML = this.alt;
       }
 
-      var img = document.getElementById("myImg03");
-      var modalImg = document.getElementById("img");
+      var imgStories  = document.getElementById("myImg03");
+      var modalImgStories  = document.getElementById("imgStories");
       var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcode_react.gif" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+      imgStories.onclick = function(){
+        modalStories.style.display = "block";
+        modalImgStories.src = "barcode_react.gif" //
+        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
         captionText.innerHTML = this.alt;
       }
 
-      var img = document.getElementById("myImg04");
-      var modalImg = document.getElementById("img");
+      var imgStories  = document.getElementById("myImg04");
+      var modalImgStories  = document.getElementById("imgStories");
       var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "custom_ecommerce.gif" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+      imgStories.onclick = function(){
+        modalStories.style.display = "block";
+        modalImgStories.src = "custom_ecommerce.gif" //
+        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
         captionText.innerHTML = this.alt;
       }
 
-
-
-
-      var img = document.getElementById("myImg06");
-      var modalImg = document.getElementById("img");
+      var imgStories  = document.getElementById("myImg05");
+      var modalImgStories  = document.getElementById("imgStories");
       var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcodeGen_1.gif" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
-        captionText.innerHTML = this.alt;
-      }
-
-      var img = document.getElementById("myImg07");
-      var modalImg = document.getElementById("img");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcodeGen_2.png" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
-        captionText.innerHTML = this.alt;
-      }
-
-      var img = document.getElementById("myImg08");
-      var modalImg = document.getElementById("img");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcodeGen_3.png" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
-        captionText.innerHTML = this.alt;
-      }
-
-      var img = document.getElementById("myImg09");
-      var modalImg = document.getElementById("img");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcodeGen_4.png" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
-        captionText.innerHTML = this.alt;
-      }
-
-      var img = document.getElementById("myImg10");
-      var modalImg = document.getElementById("img");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcodeGen_5.png" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+      imgStories.onclick = function(){
+        modalStories.style.display = "block";
+        modalImgStories.src = "data_scrape_story.gif" //
+        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
         captionText.innerHTML = this.alt;
       }
 
 
-      var img = document.getElementById("myImg11");
-      var modalImg = document.getElementById("img");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = "barcodeGen_6.png" //
-        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
-        captionText.innerHTML = this.alt;
+
+
+
+      // Posts + Modal
+
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
       }
 
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        document.getElementById("modalStories").style.display = "none";
+      }
 
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close");
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-      // When the user clicks on <span> (x), close the modal
-        
-        for (var i = 0; i < span.length; i++) {
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
 
-            span[i].onclick = function() { 
-            modal.style.display = "none";
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
 
-          }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
 
        document.addEventListener('keydown', function(e) {
           if(e.keyCode == 27){
-            modal.style.display = "none";
+            document.getElementById("myModal").style.display = "none";
+            document.getElementById("modalStories").style.display = "none";
           }
         });
 
@@ -587,7 +1056,8 @@
         $("#skillsDes").toggle("800")
       })
 
-      $("line_Project").turnBox();  
+      $("line_Project").turnBox(); 
+      
 
 
     </script>

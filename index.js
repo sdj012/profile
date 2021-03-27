@@ -10,11 +10,11 @@ function onHttpStart() {
 app.use(express.static('profiledocuments')); 
 
 app.get("/",(req,res)=>{
-  res.sendFile( __dirname+ '/index_2.html',{layout:false})
+  res.sendFile( __dirname+ '/index.html',{layout:false})
 })
 
 app.get("/index",(req,res)=>{
-  res.sendFile( __dirname+ '/index_2.html',{layout:false})
+  res.sendFile( __dirname+ '/index.html',{layout:false})
 })
 
 
@@ -24,10 +24,6 @@ app.get("/projects",(req,res)=>{
 
 app.get("/test",(req,res)=>{
   res.sendFile( __dirname+ '/test.html',{layout:false})
-})
-
-app.get("/index_updated",(req,res)=>{
-  res.sendFile( __dirname+ '/index_updated.html',{layout:false})
 })
 
 app.listen(HTTP_PORT, onHttpStart);

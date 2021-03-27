@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+  :root{
+    --background:white;
+    --contents:black;
+  }
+
+  html{
+    height: 100vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    line-height: 1.25;
+    word-spacing: 2px;
+    scroll-behavior: smooth;
+
+    background-color:var(--background);
+  }
+
+  body{
+    height:100%;
+  }
+
+  .grid-container{
+
+    display: grid;
+    height:100%;
+
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 5% 95%;
+
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "profile main main";
+    
+
+    
+  }
+
+  .navbar{
+    grid-area: navbar;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:xx-large;
+    color:black;
+    
+    background-color:var(--background);
+  }
+  
+  #badge{
+    margin-top:0%;
+    margin-left:1%;
+  }
+
+  .sectionA{
+    grid-area:profile;
+
+    margin-top:5%;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:black;
+    background-color:var(--background);
+  }
+    .sectionA p {
+      margin-left:2%;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+
+  .sectionB{
+    grid-area:main;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:black;
+
+    background-color:var(--background);
+  }
+
+    .sectionB a {
+      
+      left: auto;
+      right:auto;
+      text-decoration:none;
+      color:var(--contents);
+
+
+      transition:all 0.2s ease-in-out;
+      -webkit-transition:all 0.2s ease-in;
+      -moz-transition:all 0.2s ease-in;
+    }
+
+
+
+  [class^="line_"]{
+    display: inline;
+    margin-right:2%;
+  }
+
+
+  [class^="line_"]:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  
+
+  .line_About{
+    color:black;
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .line_Project:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .text_About{
+    position: absolute;
+    margin-top:2%;
+    margin-right:30%;
+  }
+
+  #skillsDes{
+    display:none;
+  }
+
+  #Skills{
+    display: inline;
+  }
+
+  .powered-by img{
+    visibility: hidden !important;
+  }
+
+  .embedsocial-instagram{
+    opacity: 0.9;
+    padding-left: 15%;
+    padding-right:15%;
+  }
+
+  .pic{
+    display: block;
+    margin-bottom:2.5%;
+  }
+
+  .pic img{
+    /* display: inline; */
+    border-radius: 50%;
+
+  }
+
+  .pin{
+    display: inline;
+    border-width: 20%;
+    border-color: #bbb;
+  }
+
+  .pin img{
+    background-color: black;
+    margin-left:2%;
+    margin-right:2%;
+    border-radius: 50%;
+
+    border:2px solid lightgray;
+    margin-bottom: 5%;
+    height: 70px;
+    width: 70px;
+  }
+
+  #myModal img{
+    width:35%;
+  }
+
+  .p1{
+    height: 100%;
+    padding-top:7%;
+  }
+
+  .p2{
+    height:100%;
+  }
+
+  .line_Freelance{
+    opacity:0.3;
+  }
+
+
+/* external css: flickity.css */
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  /* background: #8C8; */
+  border-radius: 5px;
+  /* counter-increment: carousel-cell; */
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+/*modal*/
+[id^=myImg]{
+  /* border-radius: 5px;
+  cursor: pointer; */
+  transition: 0.3s;
+}
+
+[id^=myImg]:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+</head>
+
+  <body>
+    <h1></h1>
+    
+    <div class="p1">
+
+    <div class="grid-container">
+
+      <!-- <div class="navbar"><p id="badge">Salley Jeong</p></div> -->
+
+      <div class="sectionA">
+
+
+          <!-- <p>
+            <a class="line_About" href="https://github.com/sdj012" target="_blank" >github <img src="https://img.icons8.com/material-sharp/15/000000/external-link.png"/></a><a href="#" class="clear"></a>
+          </p>
+
+          <p class="line_About">sdjeong012@gmail.com</p> -->
+
+        
+        </div>
+
+      <div class="sectionB">
+
+
+        
+        <div class="pic"><img src="profilePicture.jpeg" height="100px"></img></div>
+
+        <div class="menu">
+
+        <div class="line_About">
+          
+          
+          <a href="#">About</a>
+          
+
+            <div class="text_About">
+                Hello, my name is Salley Jeong, an aspiring developer based in Toronto.With hands-on experience designing and building pages from start to finish, I'm capable of quickly assessing and diving into challenges.
+                Prioritizing effectivity and reliability at all times, I aim to write with conciseness and consistency.
+                
+                <br>
+                <br>
+
+                <div id="skillsDes">
+                  
+                  <p>HTML, JS, CSS, SASS, jQuery</p>
+                  <p>ReactJS</p>
+                  <p>MongoDB, Express, Node, Mongoose</p>
+                  <p>Java, Android Studio</p>
+                  <p>Git</p>
+                  <p>Bash</p>
+                  <p>Adobe XD, Photoshop, Illustrator</p>
+                </div>
+
+                <!-- The Modal -->
+                
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <a id="modalImgLinksTo"><img class="modal-content" id="img"></a>
+                  <div id="caption"></div>
+                </div>
+             
+                
+                <div class="pin"><img id="myImg" src="home.gif" height="70px"></img></div>
+
+                <div class="pin"><img id="myImg02" src="embed_StoryView.gif" height="70px"></img></div>
+
+                <div class="pin"><img id="myImg03" src="barcode_react.gif" height="70px"></img></div>
+
+                <div class="pin"><img id="myImg04" src="custom_ecommerce.gif" height="70px"></img></div>
+
+                <div class="pin"><img id="myImg05" src="scripts.png" height="70px"></img></div>
+                
+
+
+
+                <hr></hr>
+
+                <br>
+                <!-- Flickity HTML init -->
+
+                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
+                  <div class="carousel-cell"><img id="myImg06" src="barcodeGen_1.gif" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg07" src="barcodeGen_2.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg08" src="barcodeGen_3.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg09" src="barcodeGen_4.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg10" src="barcodeGen_5.png" height="100px"></div>
+                  <div class="carousel-cell"><img id="myImg11" src="barcodeGen_6.png" height="100px"></div>
+                  </div>
+                  
+                <br>
+
+                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
+                  <div class="carousel-cell"><img src="3.png" height="100px"></div>
+                  <div class="carousel-cell"><img src="7.png" height="100px"></div>
+                  <div class="carousel-cell"><img src="41.png" height="100px"></div>
+                  <div class="carousel-cell">carousel-3</div>
+                  <div class="carousel-cell">carousel-4</div>
+                  </div>
+                
+                <br>
+
+                <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": 2900 }'>
+                  <div class="carousel-cell"><img src="3.png" height="100px"></div>
+                  <div class="carousel-cell"><img src="7.png" height="100px"></div>
+                  <div class="carousel-cell"><img src="41.png" height="100px"></div>
+                  <div class="carousel-cell">carousel-3</div>
+                  <div class="carousel-cell">carousel-4</div>
+                  </div>
+
+  
+                
+
+              
+                
+              </div>
+              
+        
+        </div>
+                      
+        <div class="line_Skills" id="Skills">Skills</div>
+        <div class="line_Project"><a href="projects">Projects</a></div>
+        <div class="line_Log"><a href="#p2">Log</a></div>
+        <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
+      </div>
+
+      </div>
+
+
+      </div>
+
+      <!-- <div class="p2" id="p2">
+        <div class='embedsocial-instagram' data-ref="266a32262c1badd7436e290c3a8fac6e86596d60"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialInstagramScript"));</script>
+      </div> -->
+
+
+
+
+
+    <script>
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      var modalImgLink = document.getElementById("modalImgLinksTo");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "home.gif" //
+        modalImg.href="https://front-end-assessment-profiles.herokuapp.com"
+        captionText.innerHTML = this.alt;
+      }
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg02");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "embed_StoryView.gif" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg03");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcode_react.gif" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg04");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "custom_ecommerce.gif" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+
+
+
+      var img = document.getElementById("myImg06");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_1.gif" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg07");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_2.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg08");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_3.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg09");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_4.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+      var img = document.getElementById("myImg10");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_5.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+
+      var img = document.getElementById("myImg11");
+      var modalImg = document.getElementById("img");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = "barcodeGen_6.png" //
+        modalImgLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        captionText.innerHTML = this.alt;
+      }
+
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close");
+
+      // When the user clicks on <span> (x), close the modal
+        
+        for (var i = 0; i < span.length; i++) {
+
+            span[i].onclick = function() { 
+            modal.style.display = "none";
+
+          }
+        }
+
+       document.addEventListener('keydown', function(e) {
+          if(e.keyCode == 27){
+            modal.style.display = "none";
+          }
+        });
+
+
+      $("#Skills").click(function(){
+        $("#skillsDes").toggle("800")
+      })
+
+      $("line_Project").turnBox();  
+
+
+    </script>
+
+  </body>
+
+</html>
