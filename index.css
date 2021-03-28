@@ -1,9 +1,431 @@
-@charset "UTF-8";
+  :root{
+    --background:white;
+    --contents:black;
+  }
 
-ul{
-  list-style-type: none;
+  
+
+  html{
+    height: 100vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    line-height: 1.25;
+    word-spacing: 2px;
+    scroll-behavior: smooth;
+
+    background-color:var(--background);
+  }
+
+  body{
+    height:100%;
+  }
+
+  .grid-container{
+
+    display: grid;
+    height:100%;
+
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 5% 95%;
+
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "profile main main";
+    
+
+    
+  }
+
+  .navbar{
+    grid-area: navbar;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:xx-large;
+    color:black;
+    
+    background-color:var(--background);
+  }
+  
+  #badge{
+    margin-top:0%;
+    margin-left:1%;
+  }
+
+  .sectionA{
+    grid-area:profile;
+
+    margin-top:5%;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:black;
+    background-color:var(--background);
+  }
+    .sectionA p {
+      margin-left:2%;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+
+  .sectionB{
+    grid-area:main;
+
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:black;
+
+    background-color:var(--background);
+  }
+
+    .sectionB a {
+      
+      left: auto;
+      /* right:auto; */
+      text-decoration:none;
+      color:var(--contents);
+
+
+      transition:all 0.2s ease-in-out;
+      -webkit-transition:all 0.2s ease-in;
+      -moz-transition:all 0.2s ease-in;
+    }
+
+
+
+  [class^="line_"]{
+    display: inline;
+    margin-right:2%;
+  }
+
+
+  [class^="line_"]:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  
+
+  .line_About{
+    color:black;
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .line_Project:hover{
+    border-bottom: 1.5px solid var(--contents);
+  }
+
+  .text_About{
+    position: absolute;
+    margin-top:2%;
+    margin-right:30%;
+  }
+
+  #skillsDes{
+    display:none;
+  }
+
+  #Skills{
+    display: inline;
+  }
+
+  .powered-by img{
+    visibility: hidden !important;
+  }
+
+  .embedsocial-instagram{
+    opacity: 0.9;
+    padding-left: 15%;
+    padding-right:15%;
+  }
+
+  .pic{
+    display: block;
+    margin-bottom:2.5%;
+  }
+
+  .pic img{
+    /* display: inline; */
+    border-radius: 50%;
+  }
+
+  .hashtags a{
+    color:lightgray;
+  }
+
+  .hashtags a:hover{
+    color:gray;
+  }
+
+  .hashtags > div{ 
+    display: inline;
+    color:lightgray;
+  }
+
+  .hashtags div:hover{
+    display: inline;
+    color:gray;
+    text-decoration: underline;
+  }
+
+  .pin{
+    display: inline;
+    border-width: 20%;
+    border-color: lightblue;
+  }
+
+  .pin img{
+    /* background-color: black; */
+    margin-left:2%;
+    margin-right:2%;
+    border-radius: 50%;
+
+    /* border:3px solid #EDECEC; */
+    border:3px solid #39B7CD;
+    margin-bottom: 5%;
+    height: 70px;
+    width: 70px;
+  }
+
+
+  /* #myModal img{
+    width:35%;
+  } */
+
+  .p1{
+    height: 100%;
+    padding-top:7%;
+  }
+
+  .p2{
+    height:100%;
+  }
+
+  .line_Freelance{
+    opacity:0.3;
+  }
+
+
+/* external css: flickity.css */
+
+.carousel {
+  background: #EEE;
 }
 
-.li{
-  display:inline;
+.carousel-cell {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  /* background: #8C8; */
+  border-radius: 5px;
+  /* counter-increment: carousel-cell; */
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+/*modal*/
+[id^=myImg]{
+  /* border-radius: 5px;
+  cursor: pointer; */
+  transition: 0.3s;
+}
+
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.row{
+  display:block;
+  margin-left:10%;
+  margin-right:0%;
+}
+
+.row > .column {
+  padding: 0 8px;
+  margin-top: 2%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+/* Modal Stories Content (image) */
+#modalStories img{
+  margin-left:33%;
+  margin-right:33%;
+}
+
+.modal-content {
+  margin: auto;
+  /* display: block; */
+  /* width: 100%; */
+  /* max-width: 700px; */
+  height:120%;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  /* width: 90%; */
+  /* max-width: 1200px; */
+}
+
+#myModal {
+  width:100%;
+  height:auto;
+  /* margin-right:auto;
+  margin-left:auto; */
+} 
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer !important;
+  position: absolute !important;
+  top: 50% !important;
+  width: auto !important;
+  padding: 16px !important;
+  margin-top: -50px!important;
+  color: black !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  transition: 0.6s ease !important;
+  border-radius: 0 3px 3px 0 !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 26% !important;
+  border-radius: 3px 0 0 3px !important;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo{
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow :hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

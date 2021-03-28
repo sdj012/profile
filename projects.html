@@ -231,6 +231,128 @@
     padding-right:0%;
   }
 
+  /*Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+/**/
+
+.modal-content {
+  margin: auto;
+  /* display: block;
+  width: 100%;
+  max-width: 700px; 
+  height:120%; */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 900px;
+
+}
+
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer !important;
+  position: absolute !important;
+  top: 50% !important;
+  width: auto !important;
+  padding: 16px !important;
+  margin-top: -50px!important;
+  color: black !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  transition: 0.6s ease !important;
+  border-radius: 0 3px 3px 0 !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 26% !important;
+  border-radius: 3px 0 0 3px !important;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
 
 </style>
 
@@ -245,14 +367,6 @@
       <!-- <div class="navbar"><p id="badge">Salley Jeong</p></div>-->
 
         <div class="sectionA">
-            
-            <!-- <p>
-            <a class="line_Project" href="https://github.com/sdj012" target="_blank" >github <img src="https://img.icons8.com/material-sharp/15/000000/external-link.png"/></a><a href="#" class="clear" > -->
-              <!-- <img src="inst_icon.png" width="25"></img></a> -->
-            <!-- </p>
-  
-            <p class="line_Project">sdjeong012@gmail.com</p>
-             -->
   
           </div>  
    
@@ -279,11 +393,121 @@
                   
                   <p id="date">2020</p>
 
+                  <p class="des_text">
+                    Optimizer for V LIVE generates optimal purchasing options given a number of target coins for consumers of V LIVE coins.
+                  </p>
+
                   <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/hpGE_m2fqbg?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                  <p class="des_text">
-                    Android application that generates optimal purchasing options for users of app V LIVE.
-                  </p>
+
+                  <!-- Post Details (Slides) -->
+
+                 <!-- <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span> -->
+                  
+                  <!--Barcode Generator-->
+<!--                   
+                  <div class="modal-content">
+
+                    <div class="mySlides">
+                      <div class="numbertext">1 </div>
+                      <img src="barcodeGen_1.gif" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">2 </div>
+                      <img src="barcodeGen_2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">3 </div>
+                      <img src="barcodeGen_3.png" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides">
+                      <div class="numbertext">4 </div>
+                      <img src="barcodeGen_4.png" style="width:100%">
+                    </div> -->
+
+                    <!--V Live-->
+
+                    <!-- <div class="mySlides">
+                      <div class="numbertext">5 </div>
+                      <img src="1_Log_1.gif" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">6 </div>
+                      <img src="1_Log_1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">7 </div>
+                      <img src="1_Log_1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">8 </div>
+                      <img src="1_Log_3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">9</div>
+                      <img src="1_Log_3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">10 </div>
+                      <img src="1_Log_5.png" style="width:100%">
+                    </div>
+
+
+                    <div class="mySlides">
+                      <div class="numbertext">11 </div>
+                      <img src="1_Log_6.gif" style="width:100%">
+                    </div> -->
+
+                    <!-- Embed -->
+
+                    <!-- <div class="mySlides">
+                      <div class="numbertext">12 </div>
+                      <img src="Embed_Log_2.gif" style="width:100%">
+                    </div>
+
+ 
+                    <div class="mySlides">
+                      <div class="numbertext">13 </div>
+                      <img src="Embed_Log_1.png" style="width:100%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">14 </div>
+                    <img src="Embed_Log_3.png" style="width:100%">
+                  </div>
+
+                </div>
+
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                  </div>
+                </div>
 
                   <div id="android" class="column">
                     <img class="demo cursor" src="title_optimizer.png"  onclick="currentSlide(4)">
@@ -312,7 +536,7 @@
 
                   <div class="column">
                     <img src="1_Log_6.gif"   onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
-                  </div>
+                  </div> -->
 
 
               </div>
@@ -325,17 +549,17 @@
               <div id="EmbedDes">
                   
                     <p id="date">2020</p>
-                    <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/Mgkkw2D4nRI?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  
+                    
                     <div class="des_text">
-                    Web application made for storing and replaying from video source codes from streaming platforms.
-                    <br>
+                      Embed allows users to save videos from video platforms that provide iframe wrapped embed codes.
+                      <br>
                       <p id="credentials">credentials for demo</p>
                       <p id="credentials_content">username: ssuser12 <br> password: ssuser12</p>
-                    
+                      
                     </div>
-
-                    <div id="node" class="column">
+                    
+                    <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/Mgkkw2D4nRI?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <div id="node" class="column">
                       <img class="demo cursor" src="title_embed.png"  onclick="currentSlide(4)">
                     </div>
                     
@@ -349,14 +573,26 @@
   
                     <div class="column">
                       <img src="Embed_Log_3.png"   onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
-                    </div>
+                    </div> -->
   
               </div>
 
             
-              <p id="Embed" class="underline clear"><img id="ext_link" src="desktop_icon.png" width="25"></img> Synchronous Barcode Generator (ReactJS)
+              <p id="BarcodeGenAssign" class="underline clear"><img id="ext_link" src="desktop_icon.png" width="25"></img> Simultaneous Barcode Generator (ReactJS)
                 <a href="#" id="links_embed">site + source</a> 
               </p>
+
+              <div id="BarcodeGenAssignDes">
+                
+                <p id="date">2021</p>
+              
+                <div class="des_text"> The simultaneous generator provides users the ability to generate multiple barcodes at a time, using a generator provided by TEC-IT </div>
+                
+                <div id="python" class="column">
+                  <img class="demo cursor" style="width:100%" src="barcodeGen_1.gif"  onclick="currentSlide(4)">
+                </div>
+
+            </div>
 
           
               <p id="TravelAdv" class="underline clear"> <img  id="ext_link" src="desktop_icon.png" width="25"></img>Travel Advisory Index (ReactJS)               
@@ -364,13 +600,13 @@
               </p>
 
             <div id="TravelAdvDes">
-                <p id="date">2019</p>
+                <p id="date">2020</p>
               
+                
+                <div class="des_text">The Travel Advisory Index renders travel advisories such as region circumstances or health care infrastructure for the country queried by the user. <br> Data Source: https://cadatacatalog.state.gov/<br> storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json</div>
                 <iframe class="place_left give_rightMargin" width="600px" height="300px" src="https://www.youtube.com/embed/S1_anb03zmU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                <div class="des_text">An index based on a JSON dataset. </div>
                   <!-- <a style="display:inline-block;padding-right:50%;" href="https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json" target="_blank" style="text-decoration: underline">https://cadatacatalog.state.gov/storage/f/2016-03-03T20%3A05%3A31.000Z/csi.json</a></p> -->
-    
 
             </div>
 
@@ -380,11 +616,11 @@
   
             <div id="DirectoryAssignDes">
               <p id="date">2020</p>
-
+              
+              <p class="des_text"> The Student Directory is an index of student profiles that allows the user to browse students by name or custom tags.</p>
               <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-              <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
-             </div>  
+             
+            </div>  
 
              <br>
             <!-- <p id="DirectoryAssign" class="underline clear"><br>Other: <br></p> -->
@@ -399,12 +635,10 @@
           <div id="PythonAssignDes">
             <p id="date">2020</p>
 
-            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            <p class="des_text"> The script prints sale,regular, and estimated CAD values for the brand VT Cosemtics.</p>
           
             <div id="python" class="column">
-              <img class="demo cursor" src="/ecommerce/data_scrape_python.gif"  onclick="currentSlide(4)">
+              <img class="demo cursor" style="width:100%" src="/ecommerce/data_scrape_python.gif"  onclick="currentSlide(4)">
             </div>
 
           </div>  
@@ -416,9 +650,22 @@
 
           <div id="OneLineAssignDes">
             <p id="date">2020</p>
-            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            <p class="des_text">The script creates,saves,and opens a project.</p>
+            
+            <div id="python" class="column">
+              <img class="demo cursor" style="width:100%" src="single_line_project_starter.gif"  onclick="currentSlide(4)">
+            </div>
+
           </div>  
+
+          <p id="studioAssign" class="underline clear"><img  id="ext_link" src="cart_icon.png" width="25">12 Studio (Woocommerce)</img> 
+            <a href="#" id="links_ShopifyAssign">site + source</a>
+          </p>
+
+          <div id="studioAssignDes">
+            <p id="date">2020</p>
+            <p class="des_text">The store allows clients to shop,preview, and give feedback on customized products. </p>
+          </div> 
 
 
           <p id="ShopifyAssign" class="underline clear"><img  id="ext_link" src="cart_icon.png" width="25">BTS Lemona (Shopify)</img> 
@@ -427,21 +674,18 @@
 
           <div id="ShopifyAssignDes">
             <p id="date">2020</p>
-            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            <p class="des_text">The Shopify powered site displahys products of BTS x Lemona, relative media and related affiliate pages.</p>
           </div> 
           
 
-          <p id="AGridAssign" class="underline clear"><img  id="ext_link" src="cart_icon.png" width="25">A-Grid - Dropshipping Store (Wordpress)</img> 
+          <p id="AGridAssign" class="underline clear"><img  id="ext_link" src="cart_icon.png" width="25">A-Grid (Woocommerce)</img> 
             <a href="#" id="links_AGridAssign">site + source</a>
           </p>
 
           <div id="AGridAssignDes">
             <p id="date">2020</p>
 
-            <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+            <p class="des_text">The WooCommerce powered site connects to suppliers through a dropshipping plugin, allowing orders to be automatically forwarded to the supplier. <br> Features: Design created by Theme "Puca" on Theme Forest, Elementor Builder, and Custom CSS  </p>
           </div>  
 
 
@@ -456,9 +700,7 @@
             <div id="KotlinAssignDes">
               <p id="date">2020</p>
 
-              <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-              <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+              <p class="des_text">"Days Since Birth Log" generates a fixed notification containing the number of days since user birth date. </p>
             </div>  
 
 
@@ -469,9 +711,7 @@
               <div id="BarcodeLogAssignDes">
                 <p id="date">2020</p>
 
-                <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+                <p class="des_text">The Barcode Log provides the user the ability to generate barcodes based on date and quantity. It allows persists the data, allowing the user to return and view their records.</p>
               </div>  
           
 
@@ -482,9 +722,7 @@
               <div id="SpotifyAssignDes">
                 <p id="date">2020</p>
 
-                <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+                <p class="des_text">The Artist Discography displays all registered albums, songs, and date released from Spotify.</p>
               </div>
           
               <p id="SpotifyButtonAssign" class="underline clear"><img  id="ext_link" src="desktop_icon.png" width="25"></img> Spotify Button (Java,Android)
@@ -493,10 +731,8 @@
   
                 <div id="SpotifyButtonAssignDes">
                   <p id="date">2020</p>
-  
-                  <iframe class="place_left give_rightMargin" width="600" height="300" src="https://www.youtube.com/embed/NpItP9xMFjU?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-                  <p class="des_text">A directory of student profiles that allows the user to browse as well as add and search by custom tags.</p>
+    
+                  <p class="des_text">On click, the Spotify Button launches a specific playlist from Spotify.</p>
                 </div>  
   
 
@@ -561,6 +797,12 @@
         $("#OneLineAssignDes").toggle("slow")
       })
 
+
+      $("#studioAssign").click(function(){
+        $("#studioAssignDes").toggle("slow")
+      })
+
+
       $("#ShopifyAssign").click(function(){
         $("#ShopifyAssignDes").toggle("slow")
       })
@@ -568,16 +810,21 @@
       $("#AGridAssign").click(function(){
         $("#AGridAssignDes").toggle("slow")
       })
+
+
       
       $("#KotlinAssign").click(function(){
         $("#KotlinAssignDes").toggle("slow")
+      })
+
+      $("#BarcodeGenAssign").click(function(){
+        $("#BarcodeGenAssignDes").toggle("slow")
       })
       
       $("#BarcodeLogAssign").click(function(){
         $("#BarcodeLogAssignDes").toggle("slow")
       })
-      
-            
+        
       $("#SpotifyAssign").click(function(){
         $("#SpotifyAssignDes").toggle("slow")
       })
@@ -623,6 +870,56 @@
         window.open("https://github.com/sdj012/front-end-assessment-submission");
 
       })
+
+
+      // Posts + Modal
+
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        document.getElementById("modalStories").style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+
+       document.addEventListener('keydown', function(e) {
+          if(e.keyCode == 27){
+            document.getElementById("myModal").style.display = "none";
+            document.getElementById("modalStories").style.display = "none";
+          }
+        });
+
+      
 
 
     </script>

@@ -2,13 +2,19 @@
 <html>
 
 <head>
+
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 <style>
+
   :root{
     --background:white;
     --contents:black;
   }
-
-  
 
   html{
     height: 100vh;
@@ -110,6 +116,10 @@
     border-bottom: 1.5px solid var(--contents);
   }
 
+
+  .hashtags a:hover{
+    color:blue !important;
+  }
   
 
   .line_About{
@@ -146,8 +156,9 @@
   }
 
   .pic{
+    position:relative;
     display: block;
-    margin-bottom:2.5%;
+    margin-bottom:15%;
   }
 
   .pic img{
@@ -160,7 +171,7 @@
   }
 
   .hashtags a:hover{
-    color:gray;
+    color:blue;
   }
 
   .hashtags > div{ 
@@ -173,25 +184,76 @@
     color:gray;
     text-decoration: underline;
   }
+/* 
+  .pin-border{
+    width: 70px;
+    height: 70px;
+    border: double 5px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  } */
+
+  .pins{
+    /* position: fixed; */
+    /* display: inline; */
+  }
 
   .pin{
     display: inline;
-    border-width: 20%;
-    border-color: lightblue;
+    /* position: absolute; */
+    /* left:0;
+    padding-top:7px;
+    padding-left:5px;
+    padding-right:-3px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    width:90px;
+    height:90x;
+    z-index: 0; */
+    
   }
 
   .pin img{
     /* background-color: black; */
     margin-left:2%;
     margin-right:2%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
-    /* border:3px solid #EDECEC; */
-    border:3px solid #39B7CD;
+    border:3px solid;
+    /* border:3px solid lightsteelblue; */
+    border-image: linear-gradient(to right,navy,blue,purple) 1;
     margin-bottom: 5%;
     height: 70px;
     width: 70px;
   }
+
+
+  .pinImg0{
+
+    margin-left:2% !important;
+    margin-right:2% !important;
+    border-radius: 50% !important;
+
+    /* border:3px solid; */
+    border:3px solid blue !important;
+    /* border-image: linear-gradient(to right, black, blue) 1; */
+    margin-bottom: 5% !important;
+    height: 70px !important;
+    width: 70px !important;
+
+  }
+
+  /* .rounded-corners-gradient-borders {
+  width: 300px;
+  height: 80px;
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+} */
 
 
   /* #myModal img{
@@ -280,7 +342,7 @@
 }
 
 .row > .column {
-  padding: 0 8px;
+  padding: 0 5px;
   margin-top: 2%;
 }
 
@@ -295,6 +357,24 @@
   width: 25%;
 }
 
+
+
+/* Modal Stories Content (image) */
+
+#modalStories{
+  height:100vh;
+  width:100vw;
+}
+
+#modalStories img{
+  max-height:70vh;
+  max-width:33vw;
+  margin-left:38vw;
+  margin-right:33vw;
+  /* padding-left:20vw;
+  padding-right:20vw; */
+  margin-bottom: 25vh;
+}
 
 /* The Modal (background) */
 .modal {
@@ -312,18 +392,14 @@
 }
 
 
-/* Modal Stories Content (image) */
-#modalStories img{
-  margin-left:33%;
-  margin-right:33%;
-}
+/**/
 
 .modal-content {
   margin: auto;
-  /* display: block; */
-  /* width: 100%; */
-  /* max-width: 700px; */
-  height:120%;
+  /* display: block;
+  width: 100%;
+  max-width: 700px; 
+  height:120%; */
 }
 
 /* Modal Content */
@@ -332,16 +408,22 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  /* width: 90%; */
-  /* max-width: 1200px; */
+  width: 90%;
+  max-width: 900px;
+
 }
 
 #myModal {
-  width:100%;
-  height:auto;
-  /* margin-right:auto;
-  margin-left:auto; */
+  height:100vh;
+  width:100vw;
 } 
+
+#myModal{
+  /* max-height:70vh;
+  max-width:auto; */
+
+  margin-bottom: 25vh;
+}
 
 /* The Close Button */
 .close {
@@ -436,11 +518,112 @@ img.hover-shadow {
 }
 
 
-</style>
+.layered{
+  position: relative;
+  margin-bottom:25%;
+}
 
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+[class^=outer], [class^=inner]{
+  position: absolute;
+}
+
+[class^=inner] img{
+  border-radius: 50%;
+  margin-left:2%;
+  margin-right:2%;
+  /* border-radius: 50%; */
+  /* border:3px solid lightsteelblue; */
+  margin-bottom: 5%;
+  height: 70px;
+  width: 70px;
+}
+
+[class^=outer]{
+  border-radius: 50%;
+  /* opacity: .7; */
+  /* background-image: linear-gradient(to right, black,white,blue,purple,grey,white,purple,orange); */
+ height:80px;
+  width:80px;
+  top: 0;
+
+
+  background-color: #343c66;
+background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+}
+
+[class^=inner]{
+  border-radius: 50%;
+  height:60px;
+  top: 5px;
+}
+
+.outer-layer-profile-picture{
+  left: 0;
+
+}
+
+.inner-layer-profile-picture{
+  left: 3.7px;
+}
+
+
+.outer-layer-0{
+  left: 0;
+
+}
+
+.inner-layer-0{
+  left: 3.7px;
+}
+
+
+.outer-layer-0{
+  left: 0;
+
+}
+
+.inner-layer-0{
+  left: 3.7px;
+}
+
+.outer-layer-1{
+  left: 99px;
+}
+
+.inner-layer-1{
+  left: 102.7px;
+}
+
+
+.outer-layer-2{
+  left: 198px
+}
+
+.inner-layer-2{
+  left: 201.7px;
+}
+
+.outer-layer-3{
+  left: 297px
+}
+
+.inner-layer-3{
+  left: 300.7px;
+}
+
+.outer-layer-4{
+  left: 396px
+}
+
+.inner-layer-4{
+  left: 399.7px;
+}
+
+
+
+</style>
 
 </head>
 
@@ -469,7 +652,10 @@ img.hover-shadow {
 
 
         
-        <div class="pic"><img src="profilePicture.jpeg" height="100px"></img></div>
+        <div class="pic">
+
+          <div class="outer-layer-profile-picture"></div><div class="inner-layer-profile-picture"><img src="profilePicture.jpeg" height="100px"></img></div>
+        </div>
 
         <div class="menu">
 
@@ -485,6 +671,10 @@ img.hover-shadow {
                 <!-- <br> “Make it work, make it right, make it fast.” – Kent Beck <br>
                 <br> “ Code is like humor. When you have to explain it, it’s bad.” – Cory House <br> -->
                 <!-- “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler<br> -->
+                “Make it work, make it right, make it fast.” – Kent Beck
+
+
+
                 <div class="hashtags">
                   <div><a href="#node">Node.js</a></div>
                   <div><a href="#mongo">MongoDB</a></div>
@@ -496,17 +686,15 @@ img.hover-shadow {
                   <div><a href="#react">ReactJS</a></div>   
                   <br>
                   <div><a href="#shopify">Shopify</a></div>
-                  <div><a>Wordpress</a></div>
-                  <div><a>Woocommerce</a></div>
-                  <div><a>Divi Elementor Themify</a></div>   
+                  <div><a href="#wordpress">Wordpress</a></div>
+                  <div><a href="#wordpress">Woocommerce</a></div>
+                  <div><a href="#wordpress">Divi Elementor Themify</a></div>   
                   <div>GoDaddy</div>
                   <div>Bluehost</div>
                 </div>
-                
+
                 <br>
-                “Make it work, make it right, make it fast.” – Kent Beck 
-                <br>
-                <br>
+              
 
                 <div id="skillsDes">
                   
@@ -518,10 +706,31 @@ img.hover-shadow {
                   <p>Bash</p>
                   <p>Adobe XD, Photoshop, Illustrator</p>
                 </div>
+
+
+
+                <!-- "Stories" -->
+
+              
+                <div class="layered">
+      
+                  <div class="outer-layer-0"></div><div class="inner-layer-0"><img id="myImg" src="home.gif" height="70px"></img></div>
+  
+                  <div class="outer-layer-1"></div><div class="inner-layer-1"><img id="myImg04" src="custom_ecommerce.gif" height="70px"></img></div>
+  
+                  <div class="outer-layer-2"></div><div class="inner-layer-2"><img id="myImg02" src="embed_StoryView.gif" height="70px"></img></div>
+  
+                  <div class="outer-layer-3"></div><div class="inner-layer-3"><img id="myImg03" src="barcode_react.gif" height="70px"></img></div>
+  
+                  <div class="outer-layer-4"></div><div class="inner-layer-4"><img id="myImg05" src="data_scrape_story.gif" height="70px"></img></div>
+                   
+                </div>
               
            
                                 
                 <!-- "Stories" -->
+
+                <!-- <div class="pins">
       
                 <div class="pin"><img id="myImg" src="home.gif" height="70px"></img></div>
 
@@ -532,22 +741,68 @@ img.hover-shadow {
                 <div class="pin"><img id="myImg03" src="barcode_react.gif" height="70px"></img></div>
 
                 <div class="pin"><img id="myImg05" src="data_scrape_story.gif" height="70px"></img></div>
+                
+                </div> -->
 
                 <!-- "Stories" Modal style="padding-right:25%;padding-left:25%;width:40%;" -->
                 
-                 <div id="modalStories" class="modal" >
+                 <div id="modalStories" class="modal">
                   <span class="close cursor" onclick=closeModal()>&times;</span>
-                  <a id="modalStoriesImgLinksTo"><img class="modal-content" id="imgStories"></a>
-                  <div id="caption"></div>
+
+                <!--Slideshow-->
+
+                <!-- <div class="modalStories">
+
+                  <div class="mySlides">
+                    <div class="numbertext">1 </div>
+                    <img src="custom_ecommerce.gif">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">2 </div>
+                    <img src="custom_ecommerce.gif">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">3 </div>
+                    <img src="custom_ecommerce.gif">
+                  </div>
+                  
+                  <div class="mySlides">
+                    <div class="numbertext">4 </div>
+                    <img src="custom_ecommerce.gif">
+                  </div>
+
+              </div> -->
+
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!--  <div class="caption-container">
+                  <p id="caption"></p>
                 </div>
 
+                <div class="column">
+                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div> --> 
 
+                <!--Dynamically Modified-->
+                  <a id="modalStoriesImgLinksTo"><img id="imgStories"></a>
+                  <div id="caption"></div>
 
+                </div>
 
-
-
-               
-
+                
                 <div class="row">
 
                   <!--Shopify: Video Background -->
@@ -678,12 +933,13 @@ img.hover-shadow {
                   </div>
 
                   <div class="column">
-                    <img src="barcodeGen_2.png"  style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                    <img src="barcodeGen_4.png"  style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img src="barcodeGen_4.png"  style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    <img src="barcodeGen_2.png"  style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
                   </div>
+
 
                   <div class="column">
                     <img class="demo cursor" src="ecommerce/28.png" style="width:100%" onclick="currentSlide(4)">
@@ -698,11 +954,7 @@ img.hover-shadow {
 
   
                 </div>
-                
-
-
-
-                <!-- <hr></hr> -->
+              
 
                 <br>
                 
@@ -714,6 +966,10 @@ img.hover-shadow {
 
                   <div id="android" class="column">
                     <img class="demo cursor" src="title_optimizer.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div id="java" class="column">
+                    <img class="demo cursor" src="1_Log_0.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
   
                   <div id="java" class="column">
@@ -732,9 +988,12 @@ img.hover-shadow {
                     <img src="1_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
                   </div>
 
-
                   <div class="column">
                     <img src="1_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+                  </div>
+                  
+                  <div class="column">
+                    <img src="1_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
@@ -753,7 +1012,7 @@ img.hover-shadow {
 
 
                   <div id="node" class="column">
-                    <img class="demo cursor" src="title_embed.png" style="width:100%" onclick="currentSlide(4)">
+                    <img class="demo cursor" src="title_embed.png" style="width:100%" onclick="currentSlide(11)">
                   </div>
                   
                   <div id="mongo" class="column">
@@ -765,7 +1024,27 @@ img.hover-shadow {
                   </div>
 
                   <div class="column">
+                    <img src="Embed_Log_4.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
                     <img src="Embed_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_6.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
@@ -775,12 +1054,27 @@ img.hover-shadow {
                   <div id="python" class="column">
                     <img class="demo cursor" src="/ecommerce/data_scrape_python.gif" style="width:100%" onclick="currentSlide(4)">
                   </div>
-  
 
+                  <div id="python" class="column">
+                    <img class="demo cursor" src="/single_line_project_starter.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
                 </div>
 
                 <div class="row">
+
+                  <div id="wordpress" class="column">
+                    <img class="demo cursor" src="woocommerce_cover.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
                   <div class="column">
+                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <!-- <div class="column">
                     <img class="demo cursor" src="title_SpotifyDiscography.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
@@ -800,16 +1094,12 @@ img.hover-shadow {
 
                   <div class="column">
                     <img class="demo cursor" src="restAPI_cover.png" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo cursor" src="woocommerce_cover.png" style="width:100%" onclick="currentSlide(4)">
-                  </div>
+                  </div> -->
 
                 </div>
 
 
-                 <!-- Post Details -->
+                 <!-- Post Details (Slides) -->
 
                  <div id="myModal" class="modal">
                   <span class="close cursor" onclick="closeModal()">&times;</span>
@@ -904,19 +1194,34 @@ img.hover-shadow {
                     <p id="caption"></p>
                   </div>
 
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                  </div>
+                </div>
+
                 </div>
 
 
 
               </div>
                   
+              <div class="line_Skills" id="Skills">Skills</div>
+              <div class="line_Project"><a href="projects">Projects</a></div>
+              <div class="line_Log"><a href="#p2">Log</a></div>
+              <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
+
               </div>
 
 
-                <div class="line_Skills" id="Skills">Skills</div>
-                <div class="line_Project"><a href="projects">Projects</a></div>
-                <div class="line_Log"><a href="#p2">Log</a></div>
-                <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
 
 
 
