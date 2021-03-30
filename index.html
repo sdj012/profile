@@ -533,6 +533,7 @@ img.hover-shadow {
   border-radius: 50%;
   margin-left:2%;
   margin-right:2%;
+  border: .5px solid lightgrey;
   /* border-radius: 50%; */
   /* border:3px solid lightsteelblue; */
   margin-bottom: 5%;
@@ -542,15 +543,17 @@ img.hover-shadow {
 
 [class^=outer]{
   border-radius: 50%;
-  opacity: .4;
-  /* background-image: linear-gradient(to right, grey,white,grey,white); */
- height:80px;
+  opacity: .3;
+  /* background-image: linear-gradient(to right,navy,blue,grey,lightsteelblue,grey,lightgrey); */
+  /* background-image: linear-gradient(to right,rgb(8, 30, 100),blue,lightsteelblue); */
+  border: .5px solid grey;
+  height:80px;
   width:80px;
   top: 0;
 
 
-  background-color: lightgrey;
-  background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
+  /* background-color: #002954;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png") */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
 }
@@ -560,6 +563,8 @@ img.hover-shadow {
   height:60px;
   top: 5px;
 }
+
+
 /* 
 .outer-layer-profile-picture{
   background-color: none;
@@ -625,6 +630,35 @@ img.hover-shadow {
   left: 399.7px;
 }
 
+/*Animation*/
+
+@keyframes demo {
+
+    0% {
+        color: Yellow !important;
+        opacity:1;
+    }
+    22% {
+        color: Yellow !important;
+    }
+    77% {
+        color: Red !important;
+    }
+    100% {
+        color: #777 !important;
+    }
+}
+    
+.demo {
+    -webkit-animation-name: demo;
+    animation-name: demo;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}  
 
 
 </style>
@@ -671,9 +705,9 @@ img.hover-shadow {
           
           
           <a href="#">About</a>
-          
 
             <div class="text_About">
+
                 <!-- <br> Goal: To simplify every problem and create simpler solutions -->
                 <!-- <br> “Make it work, make it right, make it fast.” – Kent Beck <br>
                 <br> “ Code is like humor. When you have to explain it, it’s bad.” – Cory House <br> -->
@@ -683,7 +717,7 @@ img.hover-shadow {
 
 
                 <div class="hashtags">
-                  <div><a href="#node">#Node.js</a></div>
+                  <div><a id="hashtags" href="#node">#Node.js</a></div>
                   <div><a href="#mongo">#MongoDB</a></div>
                   <div><a href="#android">#Android</a></div>
                   <div><a href="#java">#Java</a></div>
@@ -735,74 +769,15 @@ img.hover-shadow {
                 </div>
               
            
-                                
-                <!-- "Stories" -->
 
-                <!-- <div class="pins">
-      
-                <div class="pin"><img id="myImg" src="home.gif" height="70px"></img></div>
-
-                <div class="pin"><img id="myImg04" src="custom_ecommerce.gif" height="70px"></img></div>
-
-                <div class="pin"><img id="myImg02" src="embed_StoryView.gif" height="70px"></img></div>
-
-                <div class="pin"><img id="myImg03" src="barcode_react.gif" height="70px"></img></div>
-
-                <div class="pin"><img id="myImg05" src="data_scrape_story.gif" height="70px"></img></div>
                 
-                </div> -->
 
                 <!-- "Stories" Modal style="padding-right:25%;padding-left:25%;width:40%;" -->
                 
                  <div id="modalStories" class="modal">
                   <span class="close cursor" onclick=closeModal()>&times;</span>
 
-                <!--Slideshow-->
-
-                <!-- <div class="modalStories">
-
-                  <div class="mySlides">
-                    <div class="numbertext">1 </div>
-                    <img src="custom_ecommerce.gif">
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">2 </div>
-                    <img src="custom_ecommerce.gif">
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">3 </div>
-                    <img src="custom_ecommerce.gif">
-                  </div>
-                  
-                  <div class="mySlides">
-                    <div class="numbertext">4 </div>
-                    <img src="custom_ecommerce.gif">
-                  </div>
-
-              </div> -->
-
-<!-- 
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-
-              <!--  <div class="caption-container">
-                  <p id="caption"></p>
-                </div>
-
-                <div class="column">
-                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                </div> --> 
+          
 
                 <!--Dynamically Modified-->
                   <a id="modalStoriesImgLinksTo"><img id="imgStories"></a>
@@ -812,7 +787,7 @@ img.hover-shadow {
 
                 <!-- Wordpress / Woocommerce -->
 
-                <div class="spacer"></div>
+                <div class="spacer" id="log"></div>
 
                 <div class="row">
                   <div id="wordpress" class="column">
@@ -824,7 +799,7 @@ img.hover-shadow {
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="studio_demo.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
                   </div>
                 </div>
 
@@ -1101,15 +1076,6 @@ img.hover-shadow {
                     <img class="demo cursor" src="title_SpotifyButton.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
-
-                  <div class="column">
-                    <img class="demo cursor" src="reactjs_cover.png" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo cursor" src="restAPI_cover.png" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
                 </div>
 
 
@@ -1262,9 +1228,8 @@ img.hover-shadow {
 
               </div>
                   
-              <div class="line_Skills" id="Skills">Skills</div>
               <div class="line_Project"><a href="projects">Projects</a></div>
-              <div class="line_Log"><a href="#p2">Log</a></div>
+              <div class="line_Log"><a href="#log">Log</a></div>
               <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
 
               </div>
@@ -1284,13 +1249,6 @@ img.hover-shadow {
       </div>
 
       </div>
-
-      <!-- <div class="p2" id="p2">
-        <div class='embedsocial-instagram' data-ref="266a32262c1badd7436e290c3a8fac6e86596d60"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialInstagramScript"));</script>
-      </div> -->
-
-
-
 
 
     <script>
@@ -1408,7 +1366,7 @@ img.hover-shadow {
         document.addEventListener('keydown', function(e) {
 
           //Left Arrow
-          
+
           if(e.keyCode == 37){
             plusSlides(-1)
           }
@@ -1426,12 +1384,21 @@ img.hover-shadow {
         });
 
 
-      $("#Skills").click(function(){
-        $("#skillsDes").toggle("800")
-      })
+      // $("#Skills").click(function(){
+      //   $("#skillsDes").toggle("800")
+      // })
 
-      $("line_Project").turnBox(); 
+      //Animation
+
+      $("#Skills").click(function() {
+        document.getElementById("hashtags").style.animationName="demo";
+      });
       
+
+      // $("line_Project").turnBox(); 
+
+
+
 
 
     </script>
