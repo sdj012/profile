@@ -31,6 +31,20 @@
     height:100%;
   }
 
+  /*Responsivity*/
+
+  @media only screen and (max-width:1000px){
+    .spacer{
+      height:50px;
+    }
+  }
+
+  @media only screen and (min-width:1000px){
+    .spacer{
+      height:0px;
+    }
+  }
+
   .grid-container{
 
     display: grid;
@@ -116,12 +130,6 @@
     border-bottom: 1.5px solid var(--contents);
   }
 
-
-  .hashtags a:hover{
-    color:blue !important;
-  }
-  
-
   .line_About{
     color:black;
     border-bottom: 1.5px solid var(--contents);
@@ -158,7 +166,7 @@
   .pic{
     position:relative;
     display: block;
-    margin-bottom:15%;
+    margin-bottom:2.5%;
   }
 
   .pic img{
@@ -166,23 +174,21 @@
     border-radius: 50%;
   }
 
-  .hashtags a{
-    color:lightgray;
-  }
-
-  .hashtags a:hover{
-    color:blue;
-  }
-
   .hashtags > div{ 
     display: inline;
-    color:lightgray;
   }
+
+  .hashtags a{ 
+    color:grey;
+  }
+  
+  .hashtags a:hover{
+    color:orange;
+  }
+
 
   .hashtags div:hover{
     display: inline;
-    color:gray;
-    text-decoration: underline;
   }
 /* 
   .pin-border{
@@ -220,10 +226,6 @@
     margin-left:2%;
     margin-right:2%;
     /* border-radius: 50%; */
-
-    border:3px solid;
-    /* border:3px solid lightsteelblue; */
-    border-image: linear-gradient(to right,navy,blue,purple) 1;
     margin-bottom: 5%;
     height: 70px;
     width: 70px;
@@ -459,7 +461,7 @@
   width: auto !important;
   padding: 16px !important;
   margin-top: -50px!important;
-  color: black !important;
+  color: lightgrey !important;
   font-weight: bold !important;
   font-size: 20px !important;
   transition: 0.6s ease !important;
@@ -470,7 +472,7 @@
 
 /* Position the "next button" to the right */
 .next {
-  right: 26% !important;
+  right: 0% !important;
   border-radius: 3px 0 0 3px !important;
 }
 
@@ -540,15 +542,15 @@ img.hover-shadow {
 
 [class^=outer]{
   border-radius: 50%;
-  /* opacity: .7; */
-  /* background-image: linear-gradient(to right, black,white,blue,purple,grey,white,purple,orange); */
+  opacity: .4;
+  /* background-image: linear-gradient(to right, grey,white,grey,white); */
  height:80px;
   width:80px;
   top: 0;
 
 
-  background-color: #343c66;
-background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
+  background-color: lightgrey;
+  background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
 }
@@ -558,8 +560,10 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
   height:60px;
   top: 5px;
 }
-
+/* 
 .outer-layer-profile-picture{
+  background-color: none;
+  background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
   left: 0;
 
 }
@@ -567,7 +571,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
 .inner-layer-profile-picture{
   left: 3.7px;
 }
-
+ */
 
 .outer-layer-0{
   left: 0;
@@ -650,12 +654,15 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
 
       <div class="sectionB">
 
+        <div class="pic">
+          <img src="profilePicture.jpeg" height="100px"></img>
+        </div>
+
 
         
-        <div class="pic">
-
+        <!-- <div class="pic">
           <div class="outer-layer-profile-picture"></div><div class="inner-layer-profile-picture"><img src="profilePicture.jpeg" height="100px"></img></div>
-        </div>
+        </div> -->
 
         <div class="menu">
 
@@ -671,26 +678,27 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                 <!-- <br> “Make it work, make it right, make it fast.” – Kent Beck <br>
                 <br> “ Code is like humor. When you have to explain it, it’s bad.” – Cory House <br> -->
                 <!-- “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler<br> -->
-                “Make it work, make it right, make it fast.” – Kent Beck
+                <!-- “Make it work, make it right, make it fast.” – Kent Beck -->
 
 
 
                 <div class="hashtags">
-                  <div><a href="#node">Node.js</a></div>
-                  <div><a href="#mongo">MongoDB</a></div>
-                  <div><a href="#android">Android</a></div>
-                  <div><a href="#java">Java</a></div>
-                  <div><a href="#kotlin">Kotlin</a></div>
-                  <div><a href="#bash">Bash</a></div>
-                  <div><a href="#python">Python</a></div>
-                  <div><a href="#react">ReactJS</a></div>   
+                  <div><a href="#node">#Node.js</a></div>
+                  <div><a href="#mongo">#MongoDB</a></div>
+                  <div><a href="#android">#Android</a></div>
+                  <div><a href="#java">#Java</a></div>
+                  <div><a href="#kotlin">#Kotlin</a></div>
+                  <div><a href="#bash">#Bash</a></div>
+                  <div><a href="#python">#Python</a></div>
+                  <div><a href="#react">#ReactJS</a></div>   
                   <br>
-                  <div><a href="#shopify">Shopify</a></div>
-                  <div><a href="#wordpress">Wordpress</a></div>
-                  <div><a href="#wordpress">Woocommerce</a></div>
-                  <div><a href="#wordpress">Divi Elementor Themify</a></div>   
-                  <div>GoDaddy</div>
-                  <div>Bluehost</div>
+                  <div><a href="#shopify">#Shopify</a></div>
+                  <div><a href="#wordpress">#Wordpress</a></div>
+                  <div><a href="#wordpress">#Woocommerce</a></div>
+                  <div><a href="#wordpress">#Divi #Elementor #Themify #WPForms #Affiliate by Secom #Judge.me</a></div>   
+                  <div><a href="#wordpress">#Heroku</a></div>
+                  <div><a href="#wordpress">#GoDaddy</a></div>
+                  <div><a href="#wordpress">#Bluehost</a></div>
                 </div>
 
                 <br>
@@ -775,9 +783,9 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
 
               </div> -->
 
-
+<!-- 
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
               <!--  <div class="caption-container">
                   <p id="caption"></p>
@@ -800,6 +808,24 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                   <a id="modalStoriesImgLinksTo"><img id="imgStories"></a>
                   <div id="caption"></div>
 
+                </div>
+
+                <!-- Wordpress / Woocommerce -->
+
+                <div class="spacer"></div>
+
+                <div class="row">
+                  <div id="wordpress" class="column">
+                    <img class="demo cursor" src="woocommerce_cover.png" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+                  </div>
                 </div>
 
                 
@@ -1062,19 +1088,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
 
                 <div class="row">
 
-                  <div id="wordpress" class="column">
-                    <img class="demo cursor" src="woocommerce_cover.png" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
                   <div class="column">
-                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
-                  <!-- <div class="column">
                     <img class="demo cursor" src="title_SpotifyDiscography.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
@@ -1094,7 +1108,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
 
                   <div class="column">
                     <img class="demo cursor" src="restAPI_cover.png" style="width:100%" onclick="currentSlide(4)">
-                  </div> -->
+                  </div>
 
                 </div>
 
@@ -1104,7 +1118,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                  <div id="myModal" class="modal">
                   <span class="close cursor" onclick="closeModal()">&times;</span>
                   
-                  <!--Barcode Generator-->
+                  <!--ReactJS: Barcode Generator-->
                   
                   <div class="modal-content">
 
@@ -1128,7 +1142,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                       <img src="barcodeGen_4.png" style="width:100%">
                     </div>
 
-                    <!--V Live-->
+                    <!--Android V Live-->
 
                     <div class="mySlides">
                       <div class="numbertext">5 </div>
@@ -1177,12 +1191,46 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                     <div class="mySlides">
                       <div class="numbertext">13 </div>
                       <img src="Embed_Log_1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                      <div class="numbertext">14 </div>
+                      <img src="Embed_Log_3.png" style="width:100%">
+                    </div>
+
+                  <!--WP+WooCommerce-->
+
+                  <div class="mySlides">
+                    <div class="numbertext">15 </div>
+                    <img src="Embed_Log_3.png" style="width:100%">
                   </div>
 
                   <div class="mySlides">
-                    <div class="numbertext">14 </div>
-                    <img src="Embed_Log_3.png" style="width:100%">
+                    <div class="numbertext">16 </div>
+                    <img src="woocommerce_cover.png" style="width:100%">
                   </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">17 </div>
+                    <img src="studio_preview.gif" style="width:100%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">18 </div>
+                    <img src="studio_preview.gif" style="width:100%">
+                  </div>
+
+
+
+                  <!--Shopify-->
+
+                  <!--Scripts-->
+
+                  <!--ReactJS Travel Directory-->
+
+                  <!--ReactJS Student Directory-->
+
+                  <!--ReactJS Spotify-->
 
                 </div>
 
@@ -1194,7 +1242,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                     <p id="caption"></p>
                   </div>
 
-                  <div class="column">
+                  <!-- <div class="column">
                     <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
                   </div>
                   <div class="column">
@@ -1205,7 +1253,7 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
                   </div>
                   <div class="column">
                     <img class="demo cursor" src="Embed_Log_3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                  </div>
+                  </div> -->
                 </div>
 
                 </div>
@@ -1350,9 +1398,21 @@ background-image: url("https://www.transparenttextures.com/patterns/kuji.png");
       }
 
        document.addEventListener('keydown', function(e) {
+
           if(e.keyCode == 27){
             document.getElementById("myModal").style.display = "none";
             document.getElementById("modalStories").style.display = "none";
+          }
+
+          //Left Arrow
+          if(e.keyCode == 37){
+            plusSlides(-1)
+          }
+
+          //Right Arrow
+
+          if(e.keyCode == 39){
+            plusSlides(1)
           }
         });
 
