@@ -183,7 +183,7 @@
   }
   
   .hashtags a:hover{
-    color:orange;
+    color:lightgrey;
   }
 
 
@@ -533,7 +533,7 @@ img.hover-shadow {
   border-radius: 50%;
   margin-left:2%;
   margin-right:2%;
-  border: .5px solid lightgrey;
+  border: .5px solid lightgray;
   /* border-radius: 50%; */
   /* border:3px solid lightsteelblue; */
   margin-bottom: 5%;
@@ -543,10 +543,9 @@ img.hover-shadow {
 
 [class^=outer]{
   border-radius: 50%;
-  opacity: .3;
   /* background-image: linear-gradient(to right,navy,blue,grey,lightsteelblue,grey,lightgrey); */
   /* background-image: linear-gradient(to right,rgb(8, 30, 100),blue,lightsteelblue); */
-  border: .5px solid grey;
+  border: .5px solid lightgray;
   height:80px;
   width:80px;
   top: 0;
@@ -563,6 +562,16 @@ img.hover-shadow {
   height:60px;
   top: 5px;
 }
+
+/* [class^=outer]:hover{
+  border: .5px solid aquamarine;
+} */
+
+/* [class^=inner] img:hover{
+  border: 1px solid blue;
+} */
+
+
 
 
 /* 
@@ -689,7 +698,7 @@ img.hover-shadow {
       <div class="sectionB">
 
         <div class="pic">
-          <img src="profilePicture.jpeg" height="100px"></img>
+          <a href="#log"><img src="profilePicture.jpeg" height="100px"></img><a>
         </div>
 
 
@@ -801,6 +810,15 @@ img.hover-shadow {
                   <div class="column">
                     <img class="demo cursor" src="studio_demo.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
                   </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="agrid_demo.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopify_demo.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+                  </div>
+
                 </div>
 
                 
