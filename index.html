@@ -730,7 +730,7 @@ img.hover-shadow {
                   <div><a href="#mongo">#MongoDB</a></div>
                   <div><a href="#android">#Android</a></div>
                   <div><a href="#java">#Java</a></div>
-                  <div><a href="#kotlin">#Kotlin</a></div>
+                  <!-- <div><a href="#kotlin">#Kotlin</a></div> -->
                   <div><a href="#bash">#Bash</a></div>
                   <div><a href="#python">#Python</a></div>
                   <div><a href="#react">#ReactJS</a></div>   
@@ -786,8 +786,6 @@ img.hover-shadow {
                  <div id="modalStories" class="modal">
                   <span class="close cursor" onclick=closeModal()>&times;</span>
 
-          
-
                 <!--Dynamically Modified-->
                   <a id="modalStoriesImgLinksTo"><img id="imgStories"></a>
                   <div id="caption"></div>
@@ -800,7 +798,7 @@ img.hover-shadow {
 
                 <div class="row">
                   <div id="wordpress" class="column">
-                    <img class="demo cursor" src="woocommerce_cover.png" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="woocommerce_cover.gif" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
@@ -809,6 +807,10 @@ img.hover-shadow {
 
                   <div class="column">
                     <img class="demo cursor" src="studio_demo.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="WP_SMTP.gif" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
@@ -944,7 +946,7 @@ img.hover-shadow {
                   <!--Barcode-->
 
                   <div id="react" class="column">
-                    <img class="demo cursor" src="title_BarcodeGenerator.png" style="width:100%" onclick="currentSlide(4)">
+                    <img class="demo cursor" src="title_BarcodeGenerator.gif" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
                   <div class="column">
@@ -1082,12 +1084,42 @@ img.hover-shadow {
                 <div class="row">
 
                   <div class="column">
-                    <img class="demo cursor" src="title_SpotifyDiscography.png" style="width:100%" onclick="currentSlide(4)">
+                    <img class="demo cursor" src="title_Discography_B.gif" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="title_LinearClock.png" style="width:100%" onclick="currentSlide(4)">
+                    <img class="demo cursor" src="title_discography.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="0_Log_Discography.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="5_Log_Discography.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="1_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="2_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="3_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="4_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+
+                  <!-- <div class="column">
+                    <img class="demo cursor" src="title_LinearClock.png" style="width:100%" onclick="currentSlide(4)">
+                  </div> -->
 
 
                   <div class="column">
@@ -1275,16 +1307,16 @@ img.hover-shadow {
 
       // Get the modal
       var modalStories = document.getElementById("modalStories");
-      var modalStoriesImgLink = document.getElementById("modalStoriesImgLinksTo");
+      var modalImgStoriesLink = document.getElementById("modalStoriesImgLinksTo");
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       var imgStories = document.getElementById("myImg");
-      var modalImgStories = document.getElementById("imgStories");
+      // var modalImgStories = document.getElementById("myImg");
       var captionText = document.getElementById("caption");
       imgStories.onclick = function(){
         modalStories.style.display = "block";
         modalImgStories.src = "home.gif" //
-        modalImgStories.href="https://front-end-assessment-profiles.herokuapp.com"
+        modalImgStoriesLink.href="https://sallyjeong.com/projects"
         captionText.innerHTML = this.alt;
       }
 
@@ -1295,7 +1327,7 @@ img.hover-shadow {
       imgStories.onclick = function(){
         modalStories.style.display = "block";
         modalImgStories.src = "embed_StoryView.gif" //
-        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        modalImgStoriesLink.href="https://sallyjeong.com/projects"
         captionText.innerHTML = this.alt;
       }
 
@@ -1305,7 +1337,7 @@ img.hover-shadow {
       imgStories.onclick = function(){
         modalStories.style.display = "block";
         modalImgStories.src = "barcode_react.gif" //
-        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        modalImgStoriesLink.href="https://sallyjeong.com/projects"
         captionText.innerHTML = this.alt;
       }
 
@@ -1315,7 +1347,7 @@ img.hover-shadow {
       imgStories.onclick = function(){
         modalStories.style.display = "block";
         modalImgStories.src = "custom_ecommerce.gif" //
-        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        modalImgStoriesLink.href="https://sallyjeong.com/projects"
         captionText.innerHTML = this.alt;
       }
 
@@ -1325,7 +1357,7 @@ img.hover-shadow {
       imgStories.onclick = function(){
         modalStories.style.display = "block";
         modalImgStories.src = "data_scrape_story.gif" //
-        modalImgStoriesLink.href="https://front-end-assessment-profiles.herokuapp.com/"
+        modalImgStoriesLink.href="https://sallyjeong.com/projects"
         captionText.innerHTML = this.alt;
       }
 
