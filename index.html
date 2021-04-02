@@ -31,6 +31,69 @@
     height:100%;
   }
 
+    /*ChatBox Css*/
+    /* Button used to open the chat form - fixed at the bottom of the page */
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+
+  /* The popup chat - hidden by default */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  /* Full-width textarea */
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+
+
   /*Responsivity*/
 
   @media only screen and (max-width:1000px){
@@ -563,6 +626,11 @@ img.hover-shadow {
   top: 5px;
 }
 
+.inner-layer-profile img{
+  border-color: transparent;
+  border-width:0;
+}
+
 /* [class^=outer]:hover{
   border: .5px solid aquamarine;
 } */
@@ -669,13 +737,21 @@ img.hover-shadow {
     animation-timing-function: ease-in-out;
 }  
 
+.heading{
+  position:fixed;
+  top:0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  
+}
+
 
 </style>
 
 </head>
 
   <body>
-    <h1></h1>
+    <h1 class="heading">heading</h1>
     
     <div class="p1">
 
@@ -693,29 +769,43 @@ img.hover-shadow {
           <p class="line_About">sdjeong012@gmail.com</p> -->
 
         
-        </div>
+      </div>
 
       <div class="sectionB">
-
+<!-- 
         <div class="pic">
+
+          <div class="outer-layer-profile"></div><div class="inner-layer-profile"><img src="profilePicture.jpeg"height="70px"></img></div>
+
+        </div> -->
+
+
+        <!-- <div class="pic">
           <a href="#log"><img src="profilePicture.jpeg" height="100px"></img><a>
-        </div>
+     x -->
 
 
         
-        <!-- <div class="pic">
-          <div class="outer-layer-profile-picture"></div><div class="inner-layer-profile-picture"><img src="profilePicture.jpeg" height="100px"></img></div>
-        </div> -->
+        <div class="pic">
+          <img src="profilePicture.jpeg" height="100px"></img>
+        </div>
 
         <div class="menu">
 
         <div class="line_About">
 
-          
-          
-          <a href="#">About</a>
 
-            <div class="text_About">
+          <strong><a href="#">Home</a></strong>
+
+          <div class="text_About">
+
+            <!-- <br>Email: sdjeong012@gmail.com -->
+          
+             
+         
+
+          
+          
 
                 <!-- <br> Goal: To simplify every problem and create simpler solutions -->
                 <!-- <br> “Make it work, make it right, make it fast.” – Kent Beck <br>
@@ -725,26 +815,30 @@ img.hover-shadow {
 
 
 
-                <div class="hashtags">
-                  <div><a id="hashtags" href="#node">#Node.js</a></div>
-                  <div><a href="#mongo">#MongoDB</a></div>
-                  <div><a href="#android">#Android</a></div>
-                  <div><a href="#java">#Java</a></div>
+             <div class="hashtags">
+                  <!-- <div style="opacity:0.3;text-decoration: underline;">Skills:</div><br><br> -->
+                  <div><a id="hashtags" href="#node">#Node.js </a></div>
+                  <div><a href="#mongo">#MongoDB </a></div>
+                  <div><a href="#android">#Android </a></div>
+                  <div><a href="#java">#Java </a></div>
                   <!-- <div><a href="#kotlin">#Kotlin</a></div> -->
-                  <div><a href="#bash">#Bash</a></div>
-                  <div><a href="#python">#Python</a></div>
-                  <div><a href="#react">#ReactJS</a></div>   
+                  <div><a href="#bash">#Bash </a></div>
+                  <div><a href="#python">#Python </a></div>
+                  <div><a href="#react">#ReactJS </a></div>   
                   <br>
-                  <div><a href="#shopify">#Shopify</a></div>
-                  <div><a href="#wordpress">#Wordpress</a></div>
-                  <div><a href="#wordpress">#Woocommerce</a></div>
-                  <div><a href="#wordpress">#Divi #Elementor #Themify #WPForms #Affiliate by Secom #Judge.me</a></div>   
-                  <div><a href="#wordpress">#Heroku</a></div>
-                  <div><a href="#wordpress">#GoDaddy</a></div>
-                  <div><a href="#wordpress">#Bluehost</a></div>
+                  <div><a href="#shopify">#Shopify </a></div>
+                  <div><a href="#wordpress">#Wordpress </a></div>
+                  <div><a href="#wordpress">#Woocommerce </a></div>
+                  <div><a href="#wordpress">#Divi #Elementor #Themify #WPForms </a></div>   
+                  <div><a href="#wordpress">#Heroku </a></div>
+                  <div><a href="#wordpress">#GoDaddy </a></div>
+                  <div><a href="#wordpress">#Bluehost </a></div>
                 </div>
 
+                <!-- <p>For full source codes, please visit /Projects</p> -->
+
                 <br>
+
               
 
                 <div id="skillsDes">
@@ -773,8 +867,11 @@ img.hover-shadow {
   
                   <div class="outer-layer-3"></div><div class="inner-layer-3"><img id="myImg03" src="barcode_react.gif" height="70px"></img></div>
   
-                  <div class="outer-layer-4"></div><div class="inner-layer-4"><img id="myImg05" src="data_scrape_story.gif" height="70px"></img></div>
+                  <div class="outer-layer-4"></div><div class="inner-layer-4"><img id="myImg05" src="title_travelAdvisory.gif" height="70px"></img></div>
+
+                  <!-- <div class="outer-layer-5"></div><div class="inner-layer-5"><img id="myImg05" src="data_scrape_story.gif" height="70px"></img></div>
                    
+                    -->
                 </div>
               
            
@@ -792,9 +889,59 @@ img.hover-shadow {
 
                 </div>
 
+                      <!--Spotify-->
+
+                      <div class="row">
+
+                        <div class="column">
+                          <img class="demo cursor" src="title_Discography_B.gif" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                        <div class="column">
+                          <img class="demo cursor" src="title_discography.png" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                        <div class="column">
+                          <img class="demo cursor" src="0_Log_Discography.gif" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                        <div class="column">
+                          <img class="demo cursor" src="5_Log_Discography.gif" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+      
+                        <div class="column">
+                          <img class="demo cursor" src="1_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                        <div class="column">
+                          <img class="demo cursor" src="2_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                        <div class="column">
+                          <img class="demo cursor" src="3_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                        <div class="column">
+                          <img class="demo cursor" src="4_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
+                        </div>
+      
+                      </div>
+
+                <!--Index of Travel Advisories-->
+
+                <div class="row">
+
+                  <div class="column">
+                    <img class="demo cursor" src="title_IndexOfTravelAdvisories.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                </div>
+
+
                 <!-- Wordpress / Woocommerce -->
 
-                <div class="spacer" id="log"></div>
+                <!-- <div class="spacer" id="log"></div> -->
 
                 <div class="row">
                   <div id="wordpress" class="column">
@@ -970,14 +1117,68 @@ img.hover-shadow {
                     <img class="demo cursor" src="ecommerce/29.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
-
-
-
-  
                 </div>
               
 
-                <br>
+                <!--Directory-->
+
+                <div class="row">
+
+
+                  <!-- <div class="column">
+                    <img class="demo cursor" src="title_SpotifyButton.png" style="width:100%" onclick="currentSlide(4)">
+                  </div> -->
+
+                  <div class="column">
+                    <img class="demo cursor" src="directory.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="11_Log_Directory.gif" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="1_Log_Directory.png" style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="2_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="3_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="4_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="5_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="6_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="7_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="10_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="8_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="9_Log_Directory.png"  style="width:100%" onclick="currentSlide(4)">
+                  </div>
+
+                </div>
+
                 
 
                 <div class="row">
@@ -1033,7 +1234,7 @@ img.hover-shadow {
 
 
                   <div id="node" class="column">
-                    <img class="demo cursor" src="title_embed.png" style="width:100%" onclick="currentSlide(11)">
+                    <img class="demo cursor" src="title_embed.gif" style="width:100%" onclick="currentSlide(11)">
                   </div>
                   
                   <div id="mongo" class="column">
@@ -1081,7 +1282,9 @@ img.hover-shadow {
                   </div>
                 </div>
 
-                <div class="row">
+              <!--Spotify-->
+
+                <!-- <div class="row">
 
                   <div class="column">
                     <img class="demo cursor" src="title_Discography_B.gif" style="width:100%" onclick="currentSlide(4)">
@@ -1116,18 +1319,14 @@ img.hover-shadow {
                     <img class="demo cursor" src="4_Log_Discography.png" style="width:100%" onclick="currentSlide(4)">
                   </div>
 
+                </div> -->
+
 
                   <!-- <div class="column">
                     <img class="demo cursor" src="title_LinearClock.png" style="width:100%" onclick="currentSlide(4)">
                   </div> -->
 
-
-                  <div class="column">
-                    <img class="demo cursor" src="title_SpotifyButton.png" style="width:100%" onclick="currentSlide(4)">
-                  </div>
-
-                </div>
-
+                  
 
                  <!-- Post Details (Slides) -->
 
@@ -1274,32 +1473,39 @@ img.hover-shadow {
 
                 </div>
 
+                <button class="open-button" onclick="openForm()">Chat</button>
 
+                <div class="chat-popup" id="myForm">
+                  <form action="/action_page.php" class="form-container">
+                    <h1>Chat</h1>
 
-              </div>
-                  
-              <div class="line_Project"><a href="projects">Projects</a></div>
-              <div class="line_Log"><a href="#log">Log</a></div>
-              <div class="line_Freelance"><a href="http://12stud.io/299-2/">Shop</a></div>
+                    <label for="msg"><b>Message</b></label>
+                    <textarea placeholder="Type message.." name="msg" required></textarea>
 
-              </div>
-
-
-
-
+                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
 
 
 
 
               </div>
               
+              <div class="line_Project"><a href="projects">Projects</a></div>
+              <div class="line_Log"><a href="#log">Contact</a></div>
+              <!-- <div class="line_Log"><a href="#log">Log</a></div> -->
+              <!-- <div style="opacity:0.2" class="line_Freelance"><a href="http://12stud.io/299-2/">business</a></div> -->
+
+              </div>
+
+              </div>
+              
         </div>
-                      
-   
-      </div>
 
-      </div>
+    </div>
 
+    </div>
 
     <script>
 
@@ -1446,6 +1652,16 @@ img.hover-shadow {
       
 
       // $("line_Project").turnBox(); 
+
+      //ChatBox
+
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
 
 
 
