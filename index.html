@@ -12,7 +12,7 @@
 <style>
 
   :root{
-    --background:white;
+    /* --background:white; */
     --contents:black;
   }
 
@@ -28,12 +28,12 @@
   body{
     /* height:100%; */
     /* background-color:var(--background); */
-    background-image: url("background.gif");
+    background-image: url("light_background_C.jpg");
     background-attachment:fixed;
     background-repeat: no-repeat;
-    background-size:80%;
+    background-size:cover;
     background-position: bottom;
-    z-index: 0;
+    z-index: 3;
   }
   /*Responsivity*/
 
@@ -140,6 +140,7 @@
   }
 
   .line_Project:hover{
+    font-weight:bold;
     border-bottom: 1.5px solid var(--contents);
   }
 
@@ -176,6 +177,7 @@
   .pic img{
     /* display: inline; */
     border-radius: 50%;
+    border: 5px solid white;
   }
 
   .hashtags > div{ 
@@ -183,7 +185,7 @@
   }
 
   .hashtags a{ 
-    color:black;
+    color:lightblue;
   }
   
   .hashtags a:hover{
@@ -212,6 +214,7 @@
 
   .pin{
     display: inline;
+    opacity: .5;
     /* position: absolute; */
     /* left:0;
     padding-top:7px;
@@ -680,8 +683,11 @@ img.hover-shadow {
 
 .heading_1{
   position:fixed;
+  color:black;
   border:1px solid black;
   left: 25px;
+  padding-left:10px;
+  padding-right:10px;
   top:0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: medium;
@@ -691,10 +697,9 @@ img.hover-shadow {
 .heading_2{
   position:fixed;
   top:0;
-  font-family: 'Courier New', Courier, monospace;
+  right:25px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: medium;
-  right:0;
-  
 }
 
 
@@ -729,7 +734,7 @@ animation: bounce-top 0.9s both;
 
 .open-button:hover{
   opacity: .7;
-  color:aquamarine;
+  font-weight: bold;
 }
 
 @keyframes button{
@@ -888,28 +893,28 @@ animation: bounce-top 0.9s both;
  */
  @-webkit-keyframes shadow-pop-tr {
   0% {
-    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-box-shadow: 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black;
+            box-shadow: 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+    -webkit-box-shadow: 1px -1px black, 2px -2px black, 3px -3px black, 4px -4px black, 5px -5px black, 6px -6px black, 7px -7px black, 8px -8px black;
+            box-shadow: 1px -1px black, 2px -2px black, 3px -3px black, 4px -4px black, 5px -5px black, 6px -6px black, 7px -7px black, 8px -8px black;
     -webkit-transform: translateX(-8px) translateY(8px);
             transform: translateX(-8px) translateY(8px);
   }
 }
 @keyframes shadow-pop-tr {
   0% {
-    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-box-shadow: 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black;
+            box-shadow: 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black, 0 0 black;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+    -webkit-box-shadow: 1px -1px black, 2px -2px black, 3px -3px black, 4px -4px black, 5px -5px black, 6px -6px black, 7px -7px black, 8px -8px black;
+            box-shadow: 1px -1px black, 2px -2px black, 3px -3px black, 4px -4px black, 5px -5px black, 6px -6px black, 7px -7px black, 8px -8px black;
     -webkit-transform: translateX(-8px) translateY(8px);
             transform: translateX(-8px) translateY(8px);
   }
@@ -1017,7 +1022,7 @@ opacity: 0.8;
 <!-- //shadow-pop-tr" -->
   <body>
     <h1 class="heading_1 shadow-pop-tr">full-stack developer based in Toronto, Canada</h1>
-    <!-- <h1 class="heading_2">linked.in/salley-jeong github.com/sdj012 sdjeong012@gmail.com</h1> -->
+    <h1 class="heading_2 shadow-pop-tr">https://github.com/sdj012 </h1>
     
     <div class="p1">
 
@@ -1203,54 +1208,54 @@ opacity: 0.8;
                   </div> -->
 
                   <div class="column" id="Directory">
-                    <img class="demo cursor" src="directory.gif" style="width:100%" onclick="openModal();currentSlide(9)">
+                    <img class="demo cursor" src="directory.gif" style="width:100%" onclick="openModal();currentSlide(10)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="11_Log_Directory.gif" style="width:100%" onclick="openModal();currentSlide(10)">
+                    <img class="demo cursor" src="11_Log_Directory.gif" style="width:100%" onclick="openModal();currentSlide(11)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="1_Log_Directory.png" style="width:100%" onclick="openModal();currentSlide(11)">
-                  </div>
-
-
-                  <div class="column">
-                    <img class="demo cursor" src="2_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(12)">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo cursor" src="3_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(13)">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo cursor" src="4_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(14)">
+                    <img class="demo cursor" src="1_Log_Directory.png" style="width:100%" onclick="openModal();currentSlide(12)">
                   </div>
 
 
                   <div class="column">
-                    <img class="demo cursor" src="5_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(15)">
+                    <img class="demo cursor" src="2_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(13)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="6_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(16)">
+                    <img class="demo cursor" src="3_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(14)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="10_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(17)">
+                    <img class="demo cursor" src="4_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(15)">
                   </div>
 
 
                   <div class="column">
-                    <img class="demo cursor" src="9_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(18)">
+                    <img class="demo cursor" src="5_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(16)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="12_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(19)">
+                    <img class="demo cursor" src="6_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(17)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="10_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(18)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="9_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(19)">
                   </div>
 
                   <div class="column">
                     <img class="demo cursor" src="12_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(20)">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="12_Log_Directory.png"  style="width:100%" onclick="openModal();currentSlide(21)">
                   </div>
 
 
@@ -1265,41 +1270,41 @@ opacity: 0.8;
                   <!--Row-->
 
                   <div id="node" class="column">
-                    <img class="demo cursor" src="title_embed.gif" style="width:100%" onclick="openModal();currentSlide(21)">
+                    <img class="demo cursor" src="title_embed.gif" style="width:100%" onclick="openModal();currentSlide(22)">
                   </div>
                   
                   <div id="mongo" class="column">
-                    <img src="Embed_Log_2.gif"  style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+                    <img src="Embed_Log_2.gif"  style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img src="Embed_Log_1.png"  style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
-                  </div>
-
-
-                  <div class="column">
-                    <img src="Embed_Log_4.png"  style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
-                  </div>
-
-                  <div class="column">
-                    <img src="Embed_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
-                  </div>
-
-                  <div class="column">
-                    <img src="Embed_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+                    <img src="Embed_Log_1.png"  style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
                   </div>
 
 
                   <div class="column">
-                    <img src="Embed_Log_6.png"  style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+                    <img src="Embed_Log_4.png"  style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img src="Embed_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
+                    <img src="Embed_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+                  </div>
+
+
+                  <div class="column">
+                    <img src="Embed_Log_6.png"  style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
                     <img src="Embed_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor">
+                  </div>
+
+                  <div class="column">
+                    <img src="Embed_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor">
                   </div>
 
                 </div>
@@ -1309,15 +1314,15 @@ opacity: 0.8;
                 <div class="row">
 
                   <div class="column">
-                    <img class="demo cursor" src="scripts_cover.png" style="width:100%" onclick="openModal();currentSlide(29)">
+                    <img class="demo cursor" src="scripts_cover.png" style="width:100%" onclick="openModal();currentSlide(31)">
                   </div>
   
                   <div id="python" class="column">
-                    <img class="demo cursor" src="/ecommerce/data_scrape_python.gif" style="width:100%" onclick="openModal();currentSlide(30)">
+                    <img class="demo cursor" src="/ecommerce/data_scrape_python.gif" style="width:100%" onclick="openModal();currentSlide(32)">
                   </div>
   
                   <div id="python" class="column">
-                    <img class="demo cursor" src="/single_line_project_starter.gif" style="width:100%" onclick="openModal();currentSlide(31)">
+                    <img class="demo cursor" src="/single_line_project_starter.gif" style="width:100%" onclick="openModal();currentSlide(33)">
                   </div>
 
                 </div>
@@ -1328,28 +1333,28 @@ opacity: 0.8;
                 <div class="row">
 
                   <div id="react" class="column">
-                    <img class="demo cursor" src="title_BarcodeGenerator.gif" style="width:100%" onclick="openModal();currentSlide(32)">
+                    <img class="demo cursor" src="title_BarcodeGenerator.gif" style="width:100%" onclick="openModal();currentSlide(34)">
                   </div>
 
                   <div class="column">
-                    <img src="barcodeGen_1.gif" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor">
+                    <img src="barcodeGen_1.gif" style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img src="barcodeGen_4.png"  style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor">
+                    <img src="barcodeGen_4.png"  style="width:100%" onclick="openModal();currentSlide(36)" class="hover-shadow cursor">
                   </div>
 
 
                   <div class="column">
-                    <img src="barcodeGen_2.png"  style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor">
+                    <img src="barcodeGen_2.png"  style="width:100%" onclick="openModal();currentSlide(37)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/28.png" style="width:100%" onclick="openModal();currentSlide(36)">
+                    <img class="demo cursor" src="ecommerce/28.png" style="width:100%" onclick="openModal();currentSlide(38)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/29.png" style="width:100%" onclick="openModal();currentSlide(37)">
+                    <img class="demo cursor" src="ecommerce/29.png" style="width:100%" onclick="openModal();currentSlide(39)">
                   </div>
 
                 </div>
@@ -1360,39 +1365,39 @@ opacity: 0.8;
 
 
                 <div id="android" class="column">
-                  <img class="demo cursor" src="title_optimizer.png" style="width:100%" onclick="openModal();currentSlide(38)">
+                  <img class="demo cursor" src="title_optimizer.png" style="width:100%" onclick="openModal();currentSlide(40)">
                 </div>
 
                 <div id="java" class="column">
-                  <img class="demo cursor" src="1_Log_1.gif" style="width:100%" onclick="openModal();currentSlide(39)">
+                  <img class="demo cursor" src="1_Log_1.gif" style="width:100%" onclick="openModal();currentSlide(41)">
                 </div>
               
                 <div class="column">
-                  <img class="demo cursor" src="1_Log_1.png" style="width:100%" onclick="openModal();currentSlide(40)">
+                  <img class="demo cursor" src="1_Log_1.png" style="width:100%" onclick="openModal();currentSlide(42)">
                 </div>
 
                 <div id="java" class="column">
-                  <img class="demo cursor" src="1_Log_0.png" style="width:100%" onclick="openModal();currentSlide(41)">
+                  <img class="demo cursor" src="1_Log_0.png" style="width:100%" onclick="openModal();currentSlide(43)">
                 </div>
 
                 <div class="column">
-                  <img src="1_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor">
+                  <img src="1_Log_3.png"  style="width:100%" onclick="openModal();currentSlide(44)" class="hover-shadow cursor">
                 </div>
 
                 <div class="column">
-                  <img src="1_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(43)" class="hover-shadow cursor">
+                  <img src="1_Log_5.png"  style="width:100%" onclick="openModal();currentSlide(45)" class="hover-shadow cursor">
                 </div>
                 
                 <div class="column">
-                  <img src="1_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(44)" class="hover-shadow cursor">
+                  <img src="1_Log_7.png"  style="width:100%" onclick="openModal();currentSlide(46)" class="hover-shadow cursor">
                 </div>
               
                 <div class="column">
-                  <img class="demo cursor" src="1_Embed_progress.png" style="width:100%" onclick="openModal();currentSlide(45)">
+                  <img class="demo cursor" src="1_Embed_progress.png" style="width:100%" onclick="openModal();currentSlide(47)">
                 </div>
 
                 <div class="column">
-                  <img src="1_Log_6.gif"  style="width:100%" onclick="openModal();currentSlide(46)" class="hover-shadow cursor">
+                  <img src="1_Log_6.gif"  style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor">
                 </div>
 
               </div>
@@ -1405,27 +1410,27 @@ opacity: 0.8;
 
                 <div class="row">
                   <div id="wordpress" class="column">
-                    <img class="demo cursor" src="woocommerce_cover.gif" style="width:100%" onclick="openModal();currentSlide(47)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="woocommerce_cover.gif" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="studio_preview.gif" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="studio_demo.gif" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="studio_demo.gif" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="WP_SMTP.gif" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="WP_SMTP.gif" style="width:100%" onclick="openModal();currentSlide(52)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="agrid_demo.gif" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="agrid_demo.gif" style="width:100%" onclick="openModal();currentSlide(53)" class="hover-shadow cursor">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="shopify_demo.gif" style="width:100%" onclick="openModal();currentSlide(52)" class="hover-shadow cursor">
+                    <img class="demo cursor" src="shopify_demo.gif" style="width:100%" onclick="openModal();currentSlide(54)" class="hover-shadow cursor">
                   </div>
 
                 </div>
@@ -1435,27 +1440,27 @@ opacity: 0.8;
                   <!--Shopify: Video Background -->
 
                   <div id="shopify" class="column">
-                    <img class="demo cursor" src="ecommerce/11.png" style="width:100%" onclick="openModal();currentSlide(53)">
+                    <img class="demo cursor" src="ecommerce/11.png" style="width:100%" onclick="openModal();currentSlide(55)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/12.png" style="width:100%" onclick="openModal();currentSlide(54)">
+                    <img class="demo cursor" src="ecommerce/12.png" style="width:100%" onclick="openModal();currentSlide(56)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/13.png" style="width:100%" onclick="openModal();currentSlide(55)">
+                    <img class="demo cursor" src="ecommerce/13.png" style="width:100%" onclick="openModal();currentSlide(57)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/14.png" style="width:100%" onclick="openModal();currentSlide(56)">
+                    <img class="demo cursor" src="ecommerce/14.png" style="width:100%" onclick="openModal();currentSlide(58)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/15.png" style="width:100%" onclick="openModal();currentSlide(57)">
+                    <img class="demo cursor" src="ecommerce/15.png" style="width:100%" onclick="openModal();currentSlide(59)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/17.png" style="width:100%" onclick="openModal();currentSlide(58)">
+                    <img class="demo cursor" src="ecommerce/17.png" style="width:100%" onclick="openModal();currentSlide(60)">
                   </div>
                             
                 </div>
@@ -1466,23 +1471,23 @@ opacity: 0.8;
                 <div class="row">
 
                   <div id="shopify" class="column">
-                    <img class="demo cursor" src="ecommerce/18.png" style="width:100%" onclick="openModal();currentSlide(59)">
+                    <img class="demo cursor" src="ecommerce/18.png" style="width:100%" onclick="openModal();currentSlide(61)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/19.png" style="width:100%" onclick="openModal();currentSlide(60)">
+                    <img class="demo cursor" src="ecommerce/19.png" style="width:100%" onclick="openModal();currentSlide(62)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/20.png" style="width:100%" onclick="openModal();currentSlide(61)">
+                    <img class="demo cursor" src="ecommerce/20.png" style="width:100%" onclick="openModal();currentSlide(63)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/21.png" style="width:100%" onclick="openModal();currentSlide(62)">
+                    <img class="demo cursor" src="ecommerce/21.png" style="width:100%" onclick="openModal();currentSlide(64)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/22.png" style="width:100%" onclick="openModal();currentSlide(63)">
+                    <img class="demo cursor" src="ecommerce/22.png" style="width:100%" onclick="openModal();currentSlide(65)">
                   </div>
 
                 </div>
@@ -1491,15 +1496,15 @@ opacity: 0.8;
                 <div class="row">
 
                   <div id="shopify" class="column">
-                    <img class="demo cursor" src="ecommerce/60.png" style="width:100%" onclick="openModal();currentSlide(64)">
+                    <img class="demo cursor" src="ecommerce/60.png" style="width:100%" onclick="openModal();currentSlide(66)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/63.png" style="width:100%" onclick="openModal();currentSlide(65)">
+                    <img class="demo cursor" src="ecommerce/63.png" style="width:100%" onclick="openModal();currentSlide(67)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="ecommerce/62.png" style="width:100%" onclick="openModal();currentSlide(66)">
+                    <img class="demo cursor" src="ecommerce/62.png" style="width:100%" onclick="openModal();currentSlide(68)">
                   </div>
                 
                 </div>
@@ -1509,25 +1514,25 @@ opacity: 0.8;
                 <div class="row">
 
                   <div id="shopify" class="column">
-                    <img class="demo cursor" src="shopifyCommunity_Log.gif" style="width:100%" onclick="openModal();currentSlide(67)">
+                    <img class="demo cursor" src="shopifyCommunity_Log.gif" style="width:100%" onclick="openModal();currentSlide(69)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="shopifyCommunity_2.gif" style="width:100%" onclick="openModal();currentSlide(68)">
+                    <img class="demo cursor" src="shopifyCommunity_2.gif" style="width:100%" onclick="openModal();currentSlide(70)">
                   </div>
 
                   <div class="column">
-                    <img class="demo cursor" src="shopifyCommunity_3.gif" style="width:100%" onclick="openModal();currentSlide(69)">
-                  </div>
-
-
-                  <div class="column">
-                    <img class="demo cursor" src="shopifyCommunity_4.gif" style="width:100%" onclick="openModal();currentSlide(70)">
+                    <img class="demo cursor" src="shopifyCommunity_3.gif" style="width:100%" onclick="openModal();currentSlide(71)">
                   </div>
 
 
                   <div class="column">
-                    <img class="demo cursor" src="shopifyCommunity_5.gif" style="width:100%" onclick="openModal();currentSlide(71)">
+                    <img class="demo cursor" src="shopifyCommunity_4.gif" style="width:100%" onclick="openModal();currentSlide(72)">
+                  </div>
+
+
+                  <div class="column">
+                    <img class="demo cursor" src="shopifyCommunity_5.gif" style="width:100%" onclick="openModal();currentSlide(73)">
                   </div>
 
                 </div>
@@ -1986,7 +1991,7 @@ opacity: 0.8;
 
           <!-- shadow-pop-tr -->
 
-               <button class="open-button shadow-pop-tr" onclick="openForm()">Contact</button>
+               <button class="open-button bounce-top" onclick="openForm()"><img src="mail_icon.png" width="20px"></img> Contact </button>
 
                 <div class="chat-popup" id="myForm">
                   <form class="form-container">
