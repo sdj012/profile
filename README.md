@@ -1,2 +1,2 @@
 # Visual Resume
-www.sallyjeong.com
+http://www.sallyjeong.com
