@@ -1014,6 +1014,36 @@ margin-bottom:10px;
 opacity: 0.8;
 }
 
+#arrow{
+  position:absolute;
+  z-index: 0;
+  height:75%;
+  left:50%;
+  top:0%;
+  transform: scaleY(-1);
+  animation:appear 2s linear forwards;
+}
+
+#arrow path {
+  stroke-dasharray: 1560;
+  stroke-dashoffset:0;
+}
+
+@keyframes appear{
+  0%{
+    stroke-dashoffset:0;
+  }
+  25%{
+    stroke-dashoffset:1000;
+    fill:transparent;
+  }
+  100%{
+    stroke-dashoffset:2400;
+    fill:black;
+  }
+}
+
+
 
 
 </style>
@@ -1021,9 +1051,13 @@ opacity: 0.8;
 </head>
 <!-- //shadow-pop-tr" -->
   <body>
+
+    <!-- <div id="arrow"><img src="arrow_1.svg"></div> -->
+    <div><svg id="arrow" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m365.291 168.033a295.963 295.963 0 0 0 -293.291 295.967 24 24 0 0 1 -48 0 343.66 343.66 0 0 1 341.376-343.968l31.958 23.968zm-14.891 91.167 128-96a24 24 0 0 0 0-38.4l-128-96a24 24 0 1 0 -28.8 38.4l102.4 76.8-102.4 76.8a24 24 0 1 0 28.8 38.4z"/></svg></div>
+
     <h1 class="heading_1 shadow-pop-tr">full-stack developer based in Toronto, Canada</h1>
-    <h1 class="heading_2 shadow-pop-tr"><button class="btn"  class="btn cancel"><a href="/SalleyJeongResume.pdf" download>Download CV</a></button></h1>
-    
+    <!-- <h1 class="heading_2 shadow-pop-tr"><button class="btn"  class="btn cancel"><a href="/SalleyJeongResume.pdf" download>Download CV</a></button></h1>
+     -->
     <div class="p1">
 
     <div class="grid-container">
@@ -1069,6 +1103,10 @@ opacity: 0.8;
           <strong><a href="#">Home</a></strong>
 
           <div class="text_About">
+            Hi There!
+            I'm multi-dimensional creater curious &  creative by nature.
+            You can also find me at my progress log, @_codeandmore.
+            Thanks for dropping by!
 
 
              <div class="hashtags">
